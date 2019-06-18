@@ -820,7 +820,7 @@ xkb_keymap {
     
         # Top Alphabetic Row 
         key <TAB>  {type="NUMERIC", symbols= [               q,               Q,            asciicircum,     asciicircum ]};
-        key <AD01> {type="FULL_LEVEL", symbols=  [               w,               W,               percent,               8, NoSymbol, percent]};
+        key <AD01> {type="FULL_LEVEL", symbols=  [               w,               W,               NoSymbol,               8, NoSymbol, NoSymbol]};
         key <AD02> {type="FULL_LEVEL",symbols= [               f,               F,                  slash,               6, backslash, bracketleft ]};
         key <AD03> {type="FULL_LEVEL", symbols= [                p,              P,                 exclam,               4,            bar, bracketright ]};
         key <AD04> {type="NUMERIC", symbols= [               g,               G,            asciicircum,     asciicircum ]};
@@ -841,7 +841,7 @@ xkb_keymap {
         key <AC02> {type="BRACES", symbols= [               s,               S,               BackSpace,               1, parenleft ]};
         key <AC03> {type="BRACES", symbols= [               t,               T,              underscore,               0, parenright ]};
 
-        key <AC04> {type="BRACES",    symbols= [               d,               D,         percent,            percent, NoSymbol ]};
+        key <AC04> {type="FULL_LEVEL",    symbols= [               d,               D,         percent,          percent, percent ]};
         key <AC05> {type="FOUR_LEVEL", symbols= [      underscore,      underscore,            plus,               plus ]};
 
 

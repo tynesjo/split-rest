@@ -1108,7 +1108,7 @@ xkb_keymap {
     				                   { [2.5, 0], [24.5, 14] } };
         shape "RTSH" { cornerRadius = 1, { [50, 18] }, { [2.5, 0], [46.5, 14] } };
         shape "MODK" { cornerRadius = 1, { [27.5, 18] }, { [2.5, 0], [25, 14] } };
-        shape "SPCE" { cornerRadius = 1, { [100, 18] }, { [2.5, 0], [97.5, 14] } };
+        shape "SPCE" { cornerRadius = 1, { [94, 18] }, { [2.5, 0], [92, 14] } };
         shape "ARRS" { cornerRadius = 1, { [16, 13] }, { [1.5, 0], [14.5, 11] } };
     
         shape "LED"  { cornerRadius = 2, { [3, 3] } };
@@ -1119,11 +1119,12 @@ xkb_keymap {
     section "Control" {
     	left= 2;
     	top = 78;
-    	key.shape = "MODK";
+    	key.shape = "NORM";
     	row {
     	    top = 1;
-    	    keys { { <FN>, "NORM" }, <LCTL>, <LALT>,
-    		   { <SPCE>, "SPCE" }, <RALT>, <RCTL>
+    	    keys { <FN>, {<LCTL>, "LFSH"}, <LALT>,
+           <LWIN>,
+    		   { <SPCE>, "SPCE" }, <RALT>, <PRSC>, <RCTL>
     	    };
     	};
     };
@@ -1143,7 +1144,7 @@ xkb_keymap {
     	key.shape = "NORM";
     	row {
     	    top = 1;
-    	    keys { <AE00>, <AE01>, <AE02>, <AE03>, <AE04>,
+    	    keys { {<AE00>, color="grey80"}, <AE01>, <AE02>, <AE03>, <AE04>,
     		   <AE05>, <AE06>, <AE07>, <AE08>, <AE09>,
     		   <AE10>, <AE11>, <AE12>, { <BKSP>, "BKSP", color="grey80"}
     	    };

@@ -1122,7 +1122,7 @@ xkb_keymap {
     	shape = "KEYS";
     	left = 2;
     	top = 5;
-    	color = "black";
+    	color = "grey80";
         };
     
         shape "NULL1" { cornerRadius = 1,

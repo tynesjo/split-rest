@@ -1095,7 +1095,7 @@ xkb_keymap {
 
     xkb_geometry "common" {
         width = 290;
-        height = 150;
+        height = 100;
         baseColor = "grey80";
         labelColor = "white";
     
@@ -1118,7 +1118,7 @@ xkb_keymap {
  
     section "Control" {
     	left= 2;
-    	top = 109;
+    	top = 78;
     	key.shape = "MODK";
     	row {
     	    top = 1;
@@ -1137,7 +1137,7 @@ xkb_keymap {
     
     section "Alpha" {
     	left = 2;
-    	top = 33;
+    	top = 2;
     	key.gap = 1;
     	key.color = "grey60";
     	key.shape = "NORM";

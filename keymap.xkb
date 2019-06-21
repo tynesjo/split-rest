@@ -1119,20 +1119,6 @@ xkb_keymap {
         key.gap = 1;
         key.color = "grey60";
  
-    section "Control" {
-    	left= 2;
-    	top = 78;
-    	key.shape = "NORM";
-    	row {
-    	    top = 1;
-    	    keys { <FN>, {<LCTL>, "LFSH"}, <LALT>,
-           <LWIN>,
-    		   { <SPCE>, "SPCE" }, <RALT>, <PRSC>, <RCTL>
-    	    };
-    	};
-    };
-
-    
     section "Alpha" {
     	left = 2;
     	top = 2;
@@ -1171,6 +1157,19 @@ xkb_keymap {
            {<AB05>, color="grey80"}, {<AB06>, color="grey80"},
     		   <AB07>, <AB08>, <AB09>, <AB10>,
     		   { <RTSH>, "RTSH" }
+    	    };
+    	};
+    };
+ 
+    section "Control" {
+    	left= 2;
+    	top = 78;
+    	key.shape = "NORM";
+    	row {
+    	    top = 1;
+    	    keys { <FN>, {<LCTL>, "LFSH"}, <LALT>,
+           <LWIN>,
+    		   { <SPCE>, "SPCE" }, <RALT>, <PRSC>, <RCTL>
     	    };
     	};
     };

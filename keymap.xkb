@@ -1096,7 +1096,7 @@ xkb_keymap {
     xkb_geometry "common" {
         width = 290;
         height = 100;
-        baseColor = "grey80";
+        baseColor = "grey90";
         labelColor = "white";
     
         shape "FN0"  { cornerRadius = 1, { [17, 12] }, { [2, 0], [15, 10] } };

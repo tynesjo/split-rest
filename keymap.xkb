@@ -824,7 +824,7 @@ xkb_keymap {
         key <AD02> {type="FULL_LEVEL",symbols= [               f,               F,                  slash,               6, backslash, bracketleft ]};
         key <AD03> {type="FULL_LEVEL", symbols= [                p,              P,                 exclam,               4,            bar, bracketright ]};
         key <AD04> {type="NUMERIC", symbols= [               g,               G,            asciicircum,     asciicircum ]};
-        key <AD05> {[apostrophe, NoSymbol]};
+        key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
         key <AD07> {type="FOUR_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
         key <AD08> {type="TWOMOD_ALPHA", symbols= [             l,               L,      numbersign,        dollar,   NoSymbol]};

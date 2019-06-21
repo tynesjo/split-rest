@@ -1099,7 +1099,6 @@ xkb_keymap {
         baseColor = "grey90";
         labelColor = "white";
     
-        shape "FN0"  { cornerRadius = 1, { [17, 12] }, { [2, 0], [15, 10] } };
         shape "NORM" { cornerRadius = 1, { [18, 18] }, { [2.5, 0], [15.5, 14] } };
         shape "BKSP" { cornerRadius = 1, { [37, 18] }, { [2.5, 0], [34.5, 14] } };
         shape "TABK" { cornerRadius = 1, { [27, 18] }, { [2.5, 0], [24.5, 14] } };
@@ -1107,11 +1106,7 @@ xkb_keymap {
     				                   { [1, 0], [26, 16] },
     				                   { [2.5, 0], [24.5, 14] } };
         shape "RTSH" { cornerRadius = 1, { [50, 18] }, { [2.5, 0], [46.5, 14] } };
-        shape "MODK" { cornerRadius = 1, { [27.5, 18] }, { [2.5, 0], [25, 14] } };
         shape "SPCE" { cornerRadius = 1, { [94, 18] }, { [2.5, 0], [92, 14] } };
-        shape "ARRS" { cornerRadius = 1, { [16, 13] }, { [1.5, 0], [14.5, 11] } };
-    
-        shape "LED"  { cornerRadius = 2, { [3, 3] } };
     
         key.gap = 1;
         key.color = "grey60";

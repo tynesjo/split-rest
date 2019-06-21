@@ -1160,20 +1160,20 @@ xkb_keymap {
     	color = "grey80";
         };
     
-        indicator.onColor = "green";
-        indicator.offColor = "grey10";
-        indicator.top = 4;
-        indicator.shape = "LED";
-        indicator "HDDActivity" { onColor = "red"; left = 100; };
-        indicator "Num Lock"     { left = 108; };
-        indicator "Caps Lock"    { left = 114; };
-        indicator "Scroll Lock"  { left = 120; };
-        indicator "Power"	     { left = 128; };
+#    indicator.onColor = "green";
+#    indicator.offColor = "grey10";
+#    indicator.top = 4;
+#    indicator.shape = "LED";
+#    indicator "HDDActivity" { onColor = "red"; left = 100; };
+#    indicator "Num Lock"     { left = 108; };
+#    indicator "Caps Lock"    { left = 114; };
+#    indicator "Scroll Lock"  { left = 120; };
+#    indicator "Power"	     { left = 128; };
     
         key.gap = 1;
         key.color = "grey60";
     
-        section "Function" {
+    section "Function" {
     	left = 2;
     	top = 5;
     	key.shape = "FN0";
@@ -1188,9 +1188,12 @@ xkb_keymap {
     		    { <FK09>, 6 }, <FK10>, <FK11>, <FK12>
     	    };
     	};
-        }; // End of "Function" section
-    
-        section "Control" {
+    };
+   
+
+
+ 
+    section "Control" {
     	left= 2;
     	top = 109;
     	key.shape = "MODK";
@@ -1200,9 +1203,11 @@ xkb_keymap {
     		   { <SPCE>, "SPCE" }, <RALT>, <RCTL>
     	    };
     	};
-        }; // End of "Control" section
+    };
+
+
     
-        section "Editing" {
+    section "Editing" {
     	top = 5;
     	left = 233;
             key.shape = "FN0";
@@ -1214,8 +1219,9 @@ xkb_keymap {
     	    top = 14;
     	    keys { <DELE>, <END>, <PGDN> };
     	};
-        }; // End of "Editing" section
-    
+    };
+   
+ 
     section "Navigation" {
     	top = 114;
     	left = 236;
@@ -1229,8 +1235,9 @@ xkb_keymap {
     	    top = 15;
     	    keys { <LVL3>, <LVL3>, <LVL3> };
     	};
-        }; // End of "Navigation" section
+    }; // End of "Navigation" section
         
+
   #      shape "STIK" { cornerRadius = 4, { [7, 7] } };
   #  
   #      solid "STIK" {

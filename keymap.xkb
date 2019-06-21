@@ -1113,41 +1113,6 @@ xkb_keymap {
     
         shape "LED"  { cornerRadius = 2, { [3, 3] } };
     
-        shape "NULL1" { cornerRadius = 1,
-                        { [0, 0], [50, 0], [50, 18], [34, 18], [34, 4],
-    		      [16, 4], [16, 18], [0, 18] } };
-    
-        solid "NullPanel1" {
-    	shape = "NULL1";
-    	left = 237;
-    	top = 110;
-    	color = "grey80";
-        };
-    
-        shape "NULL2" { cornerRadius = 1, { [17, 13] } };
-    
-        solid "NullPanel2" {
-    	shape = "NULL2";
-    	left = 219;
-    	top = 129;
-    	color = "grey80";
-        };
-    
-        shape "NULL3" { cornerRadius = 1,
-                        { [0, 26],
-    		      [72, 26], [72, 13], [76, 13], [76, 26],
-    		      [149, 26], [149, 13], [153, 13], [153, 26],
-    		      [226, 26], [226, 0], [230, 0], [230, 26],
-    		      [284, 26], [285, 27],
-    		      [0, 27] } };
-    
-        solid "NullPanel3" {
-    	shape = "NULL3";
-    	left = 3;
-    	top = 6;
-    	color = "grey80";
-        };
-    
         key.gap = 1;
         key.color = "grey60";
  

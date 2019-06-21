@@ -824,7 +824,7 @@ xkb_keymap {
         key <AD02> {type="FULL_LEVEL",symbols= [               f,               F,                  slash,               6, backslash, bracketleft ]};
         key <AD03> {type="FULL_LEVEL", symbols= [                p,              P,                 exclam,               4,            bar, bracketright ]};
         key <AD04> {type="NUMERIC", symbols= [               g,               G,            asciicircum,     asciicircum ]};
-        key <AD05> {[apostrophe, NoSymbol]};
+        key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
         key <AD07> {type="FOUR_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
         key <AD08> {type="TWOMOD_ALPHA", symbols= [             l,               L,      numbersign,        dollar,   NoSymbol]};
@@ -840,25 +840,21 @@ xkb_keymap {
         key <AC01> {type="FULL_LEVEL", symbols= [           r,               R,        question,                2, question, greater ]};
         key <AC02> {type="BRACES", symbols= [               s,               S,               BackSpace,               1, parenleft ]};
         key <AC03> {type="BRACES", symbols= [               t,               T,              underscore,               0, parenright ]};
-
         key <AC04> {type="FULL_LEVEL",    symbols= [               d,               D,         percent,          percent, percent ]};
-        key <AC05> {type="FOUR_LEVEL", symbols= [      underscore,      underscore,            plus,               plus ]};
-
-
-        key <AC06> {type="NUMERIC", symbols= [       backslash,             bar,        NoSymbol,        NoSymbol ]};
+        key <AC05> {[NoSymbol]};
+        key <AC06> {[NoSymbol]};
         key <AC07> {type="NUMERIC", symbols= [               h,               H,            Left,        NoSymbol]};
         key <AC08> {type="BRACES", symbols= [               n,               N,            Down,            minus, braceleft]};
         key <AC09> {type="BRACES", symbols= [               e,               E,              Up,              plus, braceright]};
         key <AC10> {type="NUMERIC", symbols= [               i,               I,           Right,           slash ]};
         key <AC11> {type="NUMERIC", symbols= [               o,               O,        asterisk,        asterisk ]};
-
         key <AC12> {[Hyper_R]};
 
 
         # Return Key
         key <RTRN> {[Return]};
         key <> {[Return]};
-    
+ 
         # Bottom Alphabetic Row
         key <LFSH> {[Control_L]};
         key <LSGT> {type="NUMERIC",    symbols= [               z,               Z,               greater,                9 ]};
@@ -866,12 +862,11 @@ xkb_keymap {
         key <AB02> {type="NUMERIC",    symbols= [               c,               C,               ampersand,               5 ]};
         key <AB03> {type="BRACES",    symbols= [               v,               V,                  minus,               3, NoSymbol ]};
         key <AB04> {type="FOUR_LEVEL", symbols= [               b,               B,               NoSymbol,        NoSymbol ]};
-        key <AB05> {type="FOUR_LEVEL", symbols= [        NoSymbol,           equal,                percent,         percent ]};
-        key <AB06> {type="FOUR_LEVEL", symbols= [              at,        question,               NoSymbol,        NoSymbol ]};
+        key <AB05> {[NoSymbol]};
+        key <AB06> {[NoSymbol]};
         key <AB07> {type="NUMERICX",   symbols= [               k,               K,               quotedbl,        quotedbl, grave]};
         key <AB08> {type="BRACES",    symbols= [             m,                 M,                question,            plus, bracketleft]};
         key <AB09> {type="BRACES", symbols= [           comma,      underscore,         NoSymbol,        NoSymbol, bracketright ]};
-        # key <AB10> {type="FOUR_LEVEL", symbols= [          period,           minus,       NoSymbol,        NoSymbol ]};
         key <AB10> {[Meta_L]};
         key <RTSH> {[Control_R]};
 

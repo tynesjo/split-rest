@@ -1113,18 +1113,6 @@ xkb_keymap {
     
         shape "LED"  { cornerRadius = 2, { [3, 3] } };
     
-        shape "KEYS" { cornerRadius = 2,
-                       { [0, 0], [19, 0], [19, 13], [172, 13],
-    	             [172, 0], [286, 0], [286, 138], [216, 138],
-    	             [216, 124], [0, 124] } };
-    
-        solid "KeyPanel" {
-    	shape = "KEYS";
-    	left = 2;
-    	top = 5;
-    	color = "grey80";
-        };
-    
         shape "NULL1" { cornerRadius = 1,
                         { [0, 0], [50, 0], [50, 18], [34, 18], [34, 4],
     		      [16, 4], [16, 18], [0, 18] } };

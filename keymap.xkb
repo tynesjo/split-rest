@@ -866,8 +866,8 @@ xkb_keymap {
         key <AB02> {type="NUMERIC",    symbols= [               c,               C,               ampersand,               5 ]};
         key <AB03> {type="BRACES",    symbols= [               v,               V,                  minus,               3, NoSymbol ]};
         key <AB04> {type="FOUR_LEVEL", symbols= [               b,               B,               NoSymbol,        NoSymbol ]};
-        key <AB05> {type="FOUR_LEVEL", symbols= [        NoSymbol,           equal,                percent,         percent ]};
-        key <AB06> {type="FOUR_LEVEL", symbols= [              at,        question,               NoSymbol,        NoSymbol ]};
+        key <AB05> {[NoSymbol]};
+        key <AB06> {[NoSymbol]};
         key <AB07> {type="NUMERICX",   symbols= [               k,               K,               quotedbl,        quotedbl, grave]};
         key <AB08> {type="BRACES",    symbols= [             m,                 M,                question,            plus, bracketleft]};
         key <AB09> {type="BRACES", symbols= [           comma,      underscore,         NoSymbol,        NoSymbol, bracketright ]};

@@ -1160,38 +1160,8 @@ xkb_keymap {
     	color = "grey80";
         };
     
-#    indicator.onColor = "green";
-#    indicator.offColor = "grey10";
-#    indicator.top = 4;
-#    indicator.shape = "LED";
-#    indicator "HDDActivity" { onColor = "red"; left = 100; };
-#    indicator "Num Lock"     { left = 108; };
-#    indicator "Caps Lock"    { left = 114; };
-#    indicator "Scroll Lock"  { left = 120; };
-#    indicator "Power"	     { left = 128; };
-    
         key.gap = 1;
         key.color = "grey60";
-    
-    section "Function" {
-    	left = 2;
-    	top = 5;
-    	key.shape = "FN0";
-    	row {
-    	    top = 1;
-    	    keys {  <ESC>, { <PRSC>, 155 }, <SCLK>, <PAUS> };
-    	};
-    	row {
-    	    top = 14;
-    	    keys {  <FK01>, <FK02>, <FK03>, <FK04>,
-    		    { <FK05>, 6 }, <FK06>, <FK07>, <FK08>,
-    		    { <FK09>, 6 }, <FK10>, <FK11>, <FK12>
-    	    };
-    	};
-    };
-   
-
-
  
     section "Control" {
     	left= 2;
@@ -1205,45 +1175,14 @@ xkb_keymap {
     	};
     };
 
-
-    
-    section "Editing" {
-    	top = 5;
-    	left = 233;
-            key.shape = "FN0";
-    	row {
-    	    top = 1;
-    	    keys { <INS>, <HOME>, <PGUP> };
-    	};
-            row {
-    	    top = 14;
-    	    keys { <DELE>, <END>, <PGDN> };
-    	};
-    };
-   
- 
-    section "Navigation" {
-    	top = 114;
-    	left = 236;
-    	key.shape = "ARRS";
-    	row {
-    	    top = 1;
-    	    left = 17;
-    	    keys { <LVL3> };
-    	};
-    	row {
-    	    top = 15;
-    	    keys { <LVL3>, <LVL3>, <LVL3> };
-    	};
-    }; // End of "Navigation" section
-        
         shape "RTRN" { cornerRadius = 1, { [28, 0], [28, 37], [4, 37], [4, 18],
                                            [0, 18], [0, 0] },
                                          { [25.5, 0], [25.5, 33], [6.5, 33],
     				       [6.5, 14], [2.5, 14], [2.5, 0] } };
+
         shape "LFSH" { cornerRadius = 1, { [24, 18] }, { [2.5, 0], [21.5, 14] } };
     
-        section "Alpha" {
+    section "Alpha" {
     	left = 2;
     	top = 33;
     	key.gap = 1;
@@ -1280,7 +1219,6 @@ xkb_keymap {
     		   { <RTSH>, "RTSH" }
     	    };
     	};
-        }; // End of "Alpha" section
     };
-
+  };
 };

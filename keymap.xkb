@@ -660,6 +660,13 @@ xkb_keymap {
             level_name[Level1]= "Base";
             level_name[Level2]= "Shift";
         };
+        type "KEYPAD" {
+            modifiers= Shift+NumLock;
+            map[Shift]= Level2;
+            map[NumLock]= Level2;
+            level_name[Level1]= "Base";
+            level_name[Level2]= "Number";
+        };
         type "ALPHABETIC" {
             modifiers= Shift+Lock;
             map[Shift]= Level2;
@@ -701,14 +708,8 @@ xkb_keymap {
             level_name[Level5]= "Mod3";
             level_name[Level6]= "ModX";
         };
-        type "KEYPAD" {
-            modifiers= Shift+NumLock;
-            map[Shift]= Level2;
-            map[NumLock]= Level2;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Number";
-        };
     };
+
     xkb_symbols "pc+us(colemak)+inet(evdev)" {
     
         name[group1]="English (Colemak)";

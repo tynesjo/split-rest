@@ -759,6 +759,13 @@ xkb_keymap {
             level_name[Level4]= "Shift Alt";
             level_name[Level5]= "Mod 4";
         };
+        type "KEYPAD" {
+            modifiers= Shift+NumLock;
+            map[Shift]= Level2;
+            map[NumLock]= Level2;
+            level_name[Level1]= "Base";
+            level_name[Level2]= "Number";
+        };
     };
     xkb_symbols "pc+us(colemak)+inet(evdev)" {
     
@@ -808,7 +815,7 @@ xkb_keymap {
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
         key <AD07> {type="FOUR_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
-        key <AD08> {type="TWOMOD_ALPHA", symbols= [             l,               L,      numbersign,        dollar,   NoSymbol]};
+        key <AD08> {type="FULL_LEVEL", symbols= [             l,               L,      numbersign,        numbersign, NoSymbol, NoSymbol]};
 
         key <AD09> {type="FULL_LEVEL",   symbols= [             u,               U,      equal,       equal, asciitilde, u ]};
 

@@ -687,17 +687,6 @@ xkb_keymap {
             level_name[Level4]= "Shift Alt";
             level_name[Level5]= "Ctrl+Alt";
         };
-        type "FOUR_LEVEL" {
-            modifiers= Shift+LevelThree;
-            map[Shift]= Level2;
-            map[LevelThree]= Level3;
-            map[Shift+LevelThree]= Level4;
-            map[LevelThree+Shift]= Level4;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Alt Base";
-            level_name[Level4]= "Shift Alt";
-        };
         type "BRACES" {
             modifiers= Shift+Meta+LevelThree+LevelFive;
             map[Shift]= Level2;
@@ -756,7 +745,7 @@ xkb_keymap {
         key <DELE> {[Delete]};
    
         # Numbers Row 
-        key  <TLDE> {type="FOUR_LEVEL", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
+        key  <TLDE> {type="FULL_LEVEL", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key  <AE01> {[period]};
         key  <AE02> {[2]};
         key  <AE03> {[3]};
@@ -779,13 +768,13 @@ xkb_keymap {
         key <AD04> {type="FULL_LEVEL", symbols= [               g,               G,            asciicircum,     asciicircum ]};
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
-        key <AD07> {type="FOUR_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
+        key <AD07> {type="FULL_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
         key <AD08> {type="FULL_LEVEL", symbols= [             l,               L,      numbersign,        numbersign, NoSymbol, NoSymbol]};
 
         key <AD09> {type="FULL_LEVEL",   symbols= [             u,               U,      equal,       equal, asciitilde, u ]};
 
         key <AD10> {type="FULL_LEVEL", symbols= [               y,               Y,             dollar,             dollar, EuroSign, y ]};
-        key <AD11> {type="FOUR_LEVEL", symbols= [           colon,       semicolon,          ampersand,          ampersand ]};
+        key <AD11> {type="FULL_LEVEL", symbols= [           colon,       semicolon,          ampersand,          ampersand ]};
         key <AD12> {[NoSymbol]};
     
         # Middle Alphabetic ("Home") Row
@@ -814,7 +803,7 @@ xkb_keymap {
         key <AB01> {type="FULL_LEVEL",    symbols= [               x,               X,               NoSymbol,               7 ]};
         key <AB02> {type="FULL_LEVEL",    symbols= [               c,               C,               ampersand,               5 ]};
         key <AB03> {type="BRACES",    symbols= [               v,               V,                  minus,               3, NoSymbol ]};
-        key <AB04> {type="FOUR_LEVEL", symbols= [               b,               B,               NoSymbol,        NoSymbol ]};
+        key <AB04> {type="FULL_LEVEL", symbols= [               b,               B,               NoSymbol,        NoSymbol ]};
         key <AB05> {[NoSymbol]};
         key <AB06> {[NoSymbol]};
         key <AB07> {type="FULL_LEVEL",   symbols= [               k,               K,               quotedbl,        quotedbl, grave]};

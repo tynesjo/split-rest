@@ -698,28 +698,6 @@ xkb_keymap {
             level_name[Level3]= "Alt Base";
             level_name[Level4]= "Shift Alt";
         };
-        type "NUMERIC" {
-            modifiers= Shift+Meta+LevelThree;
-            map[Shift]= Level2;
-            map[LevelThree]= Level3;
-            map[Meta]= Level4;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Alt Base";
-            level_name[Level4]= "Shift Alt";
-        };
-        type "NUMERICX" {
-            modifiers= Shift+Meta+LevelThree+Mod4;
-            map[Shift]= Level2;
-            map[LevelThree]= Level3;
-            map[Meta]= Level4;
-            map[Mod4]=Level5;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Alt Base";
-            level_name[Level4]= "Shift Alt";
-            level_name[Level5]= "Mod3";
-        };
         type "BRACES" {
             modifiers= Shift+Meta+LevelThree+LevelFive;
             map[Shift]= Level2;
@@ -794,11 +772,11 @@ xkb_keymap {
         key  <BKSP> {[apostrophe]};
     
         # Top Alphabetic Row 
-        key <TAB>  {type="NUMERIC", symbols= [               q,               Q,            asciicircum,     asciicircum ]};
+        key <TAB>  {type="FULL_LEVEL", symbols= [               q,               Q,            asciicircum,     asciicircum ]};
         key <AD01> {type="FULL_LEVEL", symbols=  [               w,               W,               NoSymbol,               8, NoSymbol, NoSymbol]};
         key <AD02> {type="FULL_LEVEL",symbols= [               f,               F,                  slash,               6, backslash, bracketleft ]};
         key <AD03> {type="FULL_LEVEL", symbols= [                p,              P,                 exclam,               4,            bar, bracketright ]};
-        key <AD04> {type="NUMERIC", symbols= [               g,               G,            asciicircum,     asciicircum ]};
+        key <AD04> {type="FULL_LEVEL", symbols= [               g,               G,            asciicircum,     asciicircum ]};
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
         key <AD07> {type="FOUR_LEVEL", symbols= [               j,               J,        NoSymbol,        NoSymbol ]};
@@ -818,11 +796,11 @@ xkb_keymap {
         key <AC04> {type="FULL_LEVEL",    symbols= [               d,               D,         percent,          percent, percent ]};
         key <AC05> {[NoSymbol]};
         key <AC06> {[NoSymbol]};
-        key <AC07> {type="NUMERIC", symbols= [               h,               H,            Left,        NoSymbol]};
+        key <AC07> {type="FULL_LEVEL", symbols= [               h,               H,            Left,        NoSymbol]};
         key <AC08> {type="BRACES", symbols= [               n,               N,            Down,            minus, braceleft]};
         key <AC09> {type="BRACES", symbols= [               e,               E,              Up,              plus, braceright]};
-        key <AC10> {type="NUMERIC", symbols= [               i,               I,           Right,           slash ]};
-        key <AC11> {type="NUMERIC", symbols= [               o,               O,        asterisk,        asterisk ]};
+        key <AC10> {type="FULL_LEVEL", symbols= [               i,               I,           Right,           slash ]};
+        key <AC11> {type="FULL_LEVEL", symbols= [               o,               O,        asterisk,        asterisk ]};
         key <AC12> {[Hyper_R]};
 
 
@@ -832,14 +810,14 @@ xkb_keymap {
  
         # Bottom Alphabetic Row
         key <LFSH> {[Control_L]};
-        key <LSGT> {type="NUMERIC",    symbols= [               z,               Z,               greater,                9 ]};
-        key <AB01> {type="NUMERIC",    symbols= [               x,               X,               NoSymbol,               7 ]};
-        key <AB02> {type="NUMERIC",    symbols= [               c,               C,               ampersand,               5 ]};
+        key <LSGT> {type="FULL_LEVEL",    symbols= [               z,               Z,               greater,                9 ]};
+        key <AB01> {type="FULL_LEVEL",    symbols= [               x,               X,               NoSymbol,               7 ]};
+        key <AB02> {type="FULL_LEVEL",    symbols= [               c,               C,               ampersand,               5 ]};
         key <AB03> {type="BRACES",    symbols= [               v,               V,                  minus,               3, NoSymbol ]};
         key <AB04> {type="FOUR_LEVEL", symbols= [               b,               B,               NoSymbol,        NoSymbol ]};
         key <AB05> {[NoSymbol]};
         key <AB06> {[NoSymbol]};
-        key <AB07> {type="NUMERICX",   symbols= [               k,               K,               quotedbl,        quotedbl, grave]};
+        key <AB07> {type="FULL_LEVEL",   symbols= [               k,               K,               quotedbl,        quotedbl, grave]};
         key <AB08> {type="BRACES",    symbols= [             m,                 M,                question,            plus, bracketleft]};
         key <AB09> {type="BRACES", symbols= [           comma,      underscore,         NoSymbol,        NoSymbol, bracketright ]};
         key <AB10> {[Meta_L]};

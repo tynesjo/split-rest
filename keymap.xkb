@@ -1,4 +1,5 @@
 xkb_keymap {
+
     xkb_keycodes "evdev+aliases(qwerty)" {
         minimum = 8;
         maximum = 255;
@@ -805,14 +806,14 @@ xkb_keymap {
         # Numbers Row 
         key  <TLDE> {type="FOUR_LEVEL", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key  <AE01> {[period]};
-        key  <AE02> {[2, NoSymbol]};
-        key  <AE03> {[3, NoSymbol]};
-        key  <AE04> {[4, NoSymbol]};
-        key  <AE05> {[5, NoSymbol]};
-        key  <AE06> {[6, NoSymbol]};
-        key  <AE07> {[7, NoSymbol]};
-        key  <AE08> {[8, NoSymbol]};
-        key  <AE09> {[9, NoSymbol]};
+        key  <AE02> {[2]};
+        key  <AE03> {[3]};
+        key  <AE04> {[4]};
+        key  <AE05> {[5]};
+        key  <AE06> {[6]};
+        key  <AE07> {[7]};
+        key  <AE08> {[8]};
+        key  <AE09> {[9]};
         key  <AE10> {[0]};
         key  <AE11> {[less]};
         key  <AE12> {[Tab]};

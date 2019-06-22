@@ -746,19 +746,6 @@ xkb_keymap {
             level_name[Level5]= "Mod3";
             level_name[Level6]= "ModX";
         };
-        type "TWOMOD_ALPHA" {
-            modifiers= Shift+LevelThree+Mod4;
-            map[Shift]= Level2;
-            map[LevelThree]= Level3;
-            map[Mod4]= Level4;
-            map[LevelThree+Mod4]= Level5;
-
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Alt Base";
-            level_name[Level4]= "Shift Alt";
-            level_name[Level5]= "Mod 4";
-        };
         type "KEYPAD" {
             modifiers= Shift+NumLock;
             map[Shift]= Level2;

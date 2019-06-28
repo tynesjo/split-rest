@@ -18,3 +18,17 @@
     * for VIM: colon to enter command-line mode, and apostrophe can be set to enter insert mode
     * escape avaiable on either hand without moving hands out of home-position
 5. function keys brought one row down
+
+## Numeric Layer
+
+> Numerical digits and symbols often used in numerical contexts
+
+* location of numerical digit optimised based on frequency of usage (typically 0 > 1 > ... > 9)
+
+* numerical digits are located in a left-hand cluster
+* middle row contains most frequenty used numbers
+* bottom row has only odd digits, top only even ones
+* modifier key for numerical layer is dedicated
+* some non-numerical symbols also included to avoid unnecessary modifier-key switching
+
+

@@ -23,6 +23,9 @@
 
 > Numerical digits and symbols often used in numerical contexts
 
+![](images/numeric.png?raw=true)
+
+
 * location of numerical digit optimised based on frequency of usage (typically 0 > 1 > ... > 9)
 
 * numerical digits are located in a left-hand cluster

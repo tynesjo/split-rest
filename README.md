@@ -38,12 +38,28 @@
 
 ## Brackets Layer
 
-> ![](images/brackets.png?raw=true)
+> brackets of various types extensively used in programming and science
 
-* brackets of various types extensively used in programming and science
+![](images/brackets.png?raw=true)
+
 * left- and right brackets paired for each type
 * frequency of use determine location
     1. parentheses `()`
     2. curly `{}`
     3. angle `<>`
     4. square `[]`
+
+
+## Modifiers Layer
+
+> modifiers controlled by thumbs to maximum extent (strong fingers)
+
+![](images/modifiers.png?raw=true)
+
+* spacebar acts as shift if held down
+    * frees up left and right shift keys to be used as control keys
+
+* `Hyper_R` is used for a dedicated numeric layer
+* `Meta_L` is used as a dedicated brackets layer
+* both `ISO_Level_3_Shift` and `ISO_Level_5_Shift` are used fort he primary mod layer
+* both `Super_L` and `Super_R` are used fort the secondary mod layer

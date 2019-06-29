@@ -19,6 +19,7 @@
     * escape avaiable on either hand without moving hands out of home-position
 5. function keys brought one row down
 
+
 ## Numeric Layer
 
 > Numerical digits and symbols often used in numerical contexts
@@ -35,3 +36,14 @@
 * some non-numerical symbols also included to avoid unnecessary modifier-key switching
 
 
+## Brackets Layer
+
+> ![](images/brackets.png?raw=true)
+
+* brackets of various types extensively used in programming and science
+* left- and right brackets paired for each type
+* frequency of use determine location
+    1. parentheses `()`
+    2. curly `{}`
+    3. angle `<>`
+    4. square `[]`

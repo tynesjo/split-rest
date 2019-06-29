@@ -37,3 +37,13 @@
 
 
 ## Brackets Layer
+
+> ![](images/brackets.png?raw=true)
+
+* brackets of various types extensively used in programming and science
+* left- and right brackets paired for each type
+* frequency of use determine location
+    1. parentheses `()`
+    2. curly `{}`
+    3. angle `<>`
+    4. square `[]`

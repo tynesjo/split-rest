@@ -19,6 +19,7 @@
     * escape avaiable on either hand without moving hands out of home-position
 5. function keys brought one row down
 
+
 ## Numeric Layer
 
 > Numerical digits and symbols often used in numerical contexts
@@ -35,3 +36,4 @@
 * some non-numerical symbols also included to avoid unnecessary modifier-key switching
 
 
+## Brackets Layer

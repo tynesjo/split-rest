@@ -1,4 +1,41 @@
-# Keyboard Layout
+# splitRest Keyboard Layout Mod Method
+
+## What is splitRest?
+
+* splitRest is a method for modifying a keyboard layout to achieve
+    * split hand positioning
+      * increased distance between hands of two key-widths
+    * increased "at-rest" hand positioning
+      * remove vast majority of contexts when hands need to move away from "home" position
+    * improved locations of modifier keys
+      * through key overloading
+
+## Why splitRest?
+
+* improved typing ergonomics
+  * more nature hand positioning
+  * fewer and shorter hand movements
+  * less straining key-chords
+* bring wider range of symbols within muscle memory
+* faster typing
+* can be based on an existing layout (qwerty, colemak)
+  * reduced need to retrain muscle memory
+* implemented at the software level with no specific hardware requirements
+
+## Current Limitations and Issues
+
+* assumes certain modifiers are currently unused (hyper), may be an issue for some programs/contexts (emacs?)
+* some software interferes with non-standard modifier key implementation (e.g. firefox, keepass)
+* currently implemented for colemak-base only
+* limited testing
+* works on x windowing system only
+* extremely limited testing
+    * 6 months' single system usage (arch linux, i3wm, urxvt, vim)
+
+# splitRest(colemak) Example
+
+* currently splitRest has only been implemented for Colemak
+* below are examples of how the different *layers* work for Colemak
 
 ## Base Layer
 

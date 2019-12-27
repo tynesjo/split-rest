@@ -57,7 +57,6 @@ xkb_keymap {
         <AB09> = 60;
         <AB10> = 61;
         <RTSH> = 62;
-        <KPMU> = 63;
         <LALT> = 64;
         <SPCE> = 65;
         <CAPS> = 66;
@@ -73,19 +72,6 @@ xkb_keymap {
         <FK10> = 76;
         <NMLK> = 77;
         <SCLK> = 78;
-         <KP7> = 79;
-         <KP8> = 80;
-         <KP9> = 81;
-        <KPSU> = 82;
-         <KP4> = 83;
-         <KP5> = 84;
-         <KP6> = 85;
-        <KPAD> = 86;
-         <KP1> = 87;
-         <KP2> = 88;
-         <KP3> = 89;
-         <KP0> = 90;
-        <KPDL> = 91;
         <LVL3> = 92;
         <LSGT> = 94;
         <FK11> = 95;
@@ -97,9 +83,7 @@ xkb_keymap {
         <HKTG> = 101;
         <MUHE> = 102;
         <JPCM> = 103;
-        <KPEN> = 104;
         <RCTL> = 105;
-        <KPDV> = 106;
         <PRSC> = 107;
         <RALT> = 108;
         <LNFD> = 109;
@@ -118,7 +102,6 @@ xkb_keymap {
         <VOL-> = 122;
         <VOL+> = 123;
         <POWR> = 124;
-        <KPEQ> = 125;
         <I126> = 126;
         <PAUS> = 127;
         <I128> = 128;
@@ -269,7 +252,6 @@ xkb_keymap {
         alias <LMTA> = <LWIN>;
         alias <RMTA> = <RWIN>;
         alias <ALGR> = <RALT>;
-        alias <KPPT> = <I129>;
     };
     
     xkb_compatibility "complete" {
@@ -823,7 +805,6 @@ xkb_keymap {
     
         key <LVL3> {[NoSymbol]};
 
-        key <KPDV> {type="CTRL+ALT", symbols= [       KP_Divide,       KP_Divide,       KP_Divide,       KP_Divide,      XF86Ungrab ]};
         key <RWIN> {[NoSymbol]};
 
         key <LNFD> {         [        Linefeed ] };
@@ -832,7 +813,6 @@ xkb_keymap {
         key <VOL-> {         [ XF86AudioLowerVolume ] };
         key <VOL+> {         [ XF86AudioRaiseVolume ] };
         key <POWR> {         [    XF86PowerOff ] };
-        key <KPEQ> {         [        KP_Equal ] };
         key <I126> {         [       plusminus ] };
         key <PAUS> {[NoSymbol]};
         key <I128> {         [     XF86LaunchA ] };
@@ -944,21 +924,6 @@ xkb_keymap {
    
 
         #### NoSymbol Mappings
-        key   <KPMU> {[NoSymbol]};
-        key   <KP7> {[NoSymbol]};
-        key   <KP8> {[NoSymbol]};
-        key   <KP9> {[NoSymbol]};
-        key   <KPSU> {[NoSymbol]};
-        key   <KP4> {[NoSymbol]};
-        key   <KP5> {[NoSymbol]};
-        key   <KP6> {[NoSymbol]};
-        key   <KPAD> {[NoSymbol]};
-        key   <KP1> {[NoSymbol]};
-        key   <KP2> {[NoSymbol]};
-        key   <KP3> {[NoSymbol]};
-        key   <KP0> {[NoSymbol]};
-        key   <KPDL> {[NoSymbol]};
-
         key   <AB11> {[NoSymbol]};
 
         key   <KATA> {[Tab]};
@@ -967,7 +932,6 @@ xkb_keymap {
         key   <HKTG> {[NoSymbol]};
         key   <MUHE> {[NoSymbol]};
         key   <JPCM> {[NoSymbol]};
-        key   <KPEN> {[NoSymbol]};
         key   <I120> {[NoSymbol]};
         key   <AE13> {[NoSymbol]};
 

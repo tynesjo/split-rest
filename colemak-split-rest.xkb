@@ -246,7 +246,6 @@ xkb_keymap {
         virtual indicator 12 = "Shift Lock";
         virtual indicator 13 = "Group 2";
         virtual indicator 14 = "Mouse Keys";
-        alias <AC12> = <BKSL>;
         alias <MENU> = <COMP>;
         alias <HZTG> = <TLDE>;
         alias <LMTA> = <LWIN>;
@@ -730,7 +729,7 @@ xkb_keymap {
         key <AC09> {type="MAX_COMBO", symbols= [     e,          E,          Up,        plus,   NoSymbol,   braceright ]};
         key <AC10> {type="MAX_COMBO", symbols= [     i,          I,       Right,       slash,   NoSymbol,     NoSymbol ]};
         key <AC11> {type="MAX_COMBO", symbols= [     o,          O,    asterisk,    asterisk,   NoSymbol,     NoSymbol ]};
-        key <AC12> {[Hyper_R]};
+        key <BKSL> {[Hyper_R]};
 
         # Bottom Alphabetic Row
         key <LFSH> {[Control_L]};
@@ -928,22 +927,15 @@ xkb_keymap {
         key   <I253> {[ Greek_tau ]};
     
         ###### Modifier Maps:
+        # Mod1 is Meta (typically Alt), Mod5 is AltGr, Mod4 is Compose
+        modifier_map Shift   { <SPCE>         };
         modifier_map Control { <LFSH>, <RTSH> };
-
-        modifier_map Mod5 { <LALT> };
-        modifier_map Mod5 { <RALT> };
-
-        modifier_map Shift { <SPCE> };
-
-        # unused compose
-        modifier_map Mod4 { <PRSC> };
-        modifier_map Mod4 { <LWIN> };
-
-        # mod1 is the 'Alt' keysym
-        modifier_map Mod1 { <LCTL>, <RCTL> };
+        modifier_map Mod1    { <LCTL>, <RCTL> };
+        modifier_map Mod4    { <PRSC>, <LWIN> };
+        modifier_map Mod5    { <LALT>, <RALT> };
 
         # for numeric layer
-        modifier_map Mod3 { <AC12> };
+        modifier_map Mod3 { <BKSL> };
         modifier_map Lock { <AB10> };
     };
 
@@ -1003,7 +995,7 @@ xkb_keymap {
           		   <AC01>, <AC02>, <AC03>, <AC04>, 
                  {<AC05>, color="grey80"}, {<AC06>, color="grey80"},
                  <AC07>, <AC08>, <AC09>, <AC10>, 
-          		   <AC11>, <AC12>
+          		   <AC11>, <BKSL>
           	    };
           	};
           	row {

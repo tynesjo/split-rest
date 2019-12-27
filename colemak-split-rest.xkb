@@ -750,63 +750,59 @@ xkb_keymap {
         key  <BKSP> {[apostrophe]};
     
         # Top Alphabetic Row 
-        key <TAB>  {type="MAX_COMBO", symbols= [               q,               Q,     asciicircum,     asciicircum ]};
-        key <AD01> {type="MAX_COMBO", symbols= [               w,               W,        NoSymbol,               8,     NoSymbol,     NoSymbol   ]};
-        key <AD02> {type="MAX_COMBO", symbols= [               f,               F,           slash,               6,    backslash, bracketleft   ]};
-        key <AD03> {type="MAX_COMBO", symbols= [               p,               P,          exclam,               4,          bar, bracketright  ]};
-        key <AD04> {type="MAX_COMBO", symbols= [               g,               G,     asciicircum,     asciicircum                           ]};
+        key <TAB>  {type="MAX_COMBO", symbols= [     q,          Q, asciicircum, asciicircum,   NoSymbol,     NoSymbol ]};
+        key <AD01> {type="MAX_COMBO", symbols= [     w,          W,    NoSymbol,           8,   NoSymbol,     NoSymbol ]};
+        key <AD02> {type="MAX_COMBO", symbols= [     f,          F,       slash,           6,  backslash,  bracketleft ]};
+        key <AD03> {type="MAX_COMBO", symbols= [     p,          P,      exclam,           4,        bar, bracketright ]};
+        key <AD04> {type="MAX_COMBO", symbols= [     g,          G, asciicircum, asciicircum,   NoSymbol,     NoSymbol ]};
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
-        key <AD07> {type="MAX_COMBO", symbols= [               j,               J,        NoSymbol,        NoSymbol                           ]};
-        key <AD08> {type="MAX_COMBO", symbols= [               l,               L,      numbersign,        numbersign, NoSymbol, NoSymbol     ]};
-
-        key <AD09> {type="MAX_COMBO", symbols= [               u,               U,           equal,       equal, asciitilde, u                ]};
-
-        key <AD10> {type="MAX_COMBO", symbols= [               y,               Y,          dollar,             dollar, EuroSign, y           ]};
-        key <AD11> {type="MAX_COMBO", symbols= [           colon,       semicolon,       ampersand,          ampersand                        ]};
+        key <AD07> {type="MAX_COMBO", symbols= [     j,          J,    NoSymbol,    NoSymbol,   NoSymbol,     NoSymbol ]};
+        key <AD08> {type="MAX_COMBO", symbols= [     l,          L,  numbersign,  numbersign,   NoSymbol,     NoSymbol ]};
+        key <AD09> {type="MAX_COMBO", symbols= [     u,          U,       equal,       equal, asciitilde,            u ]};
+        key <AD10> {type="MAX_COMBO", symbols= [     y,          Y,      dollar,      dollar,   EuroSign,            y ]};
+        key <AD11> {type="MAX_COMBO", symbols= [ colon,  semicolon,   ampersand,   ampersand,   NoSymbol,     NoSymbol ]};
         key <AD12> {[NoSymbol]};
     
-        # Middle Alphabetic ("Home") Row
-        key <CAPS> {type="MAX_COMBO", symbols= [               a,               A,              at,         NoSymbol,       at, less           ]};
-        key <AC01> {type="MAX_COMBO", symbols= [               r,               R,        question,                2, question, greater        ]};
-        key <AC02> {type="MAX_COMBO", symbols= [               s,               S,       BackSpace,                1, NoSymbol, parenleft      ]};
-        key <AC03> {type="MAX_COMBO", symbols= [               t,               T,      underscore,                0, NoSymbol, parenright     ]};
-        key <AC04> {type="MAX_COMBO", symbols= [               d,               D,         percent,          percent,  percent, percent        ]};
+        # Middle Alphabetic Row
+        key <CAPS> {type="MAX_COMBO", symbols= [     a,          A,          at,    NoSymbol,         at,         less ]};
+        key <AC01> {type="MAX_COMBO", symbols= [     r,          R,    question,           2,   question,      greater ]};
+        key <AC02> {type="MAX_COMBO", symbols= [     s,          S,   BackSpace,           1,   NoSymbol,    parenleft ]};
+        key <AC03> {type="MAX_COMBO", symbols= [     t,          T,  underscore,           0,   NoSymbol,   parenright ]};
+        key <AC04> {type="MAX_COMBO", symbols= [     d,          D,     percent,     percent,    percent,      percent ]};
         key <AC05> {[NoSymbol]};
         key <AC06> {[NoSymbol]};
-        key <AC07> {type="MAX_COMBO", symbols= [               h,               H,            Left,        NoSymbol]};
-        key <AC08> {type="MAX_COMBO", symbols= [               n,               N,            Down,            minus, NoSymbol, braceleft     ]};
-        key <AC09> {type="MAX_COMBO", symbols= [               e,               E,              Up,              plus, NoSymbol,  braceright  ]};
-        key <AC10> {type="MAX_COMBO", symbols= [               i,               I,           Right,           slash                           ]};
-        key <AC11> {type="MAX_COMBO", symbols= [               o,               O,        asterisk,        asterisk                           ]};
+        key <AC07> {type="MAX_COMBO", symbols= [     h,          H,        Left,    NoSymbol,   NoSymbol,     NoSymbol ]};
+        key <AC08> {type="MAX_COMBO", symbols= [     n,          N,        Down,       minus,   NoSymbol,    braceleft ]};
+        key <AC09> {type="MAX_COMBO", symbols= [     e,          E,          Up,        plus,   NoSymbol,   braceright ]};
+        key <AC10> {type="MAX_COMBO", symbols= [     i,          I,       Right,       slash,   NoSymbol,     NoSymbol ]};
+        key <AC11> {type="MAX_COMBO", symbols= [     o,          O,    asterisk,    asterisk,   NoSymbol,     NoSymbol ]};
         key <AC12> {[Hyper_R]};
 
+        # Bottom Alphabetic Row
+        key <LFSH> {[Control_L]};
+        key <LSGT> {type="MAX_COMBO", symbols= [     z,          Z,     greater,           9,   NoSymbol,     NoSymbol ]};
+        key <AB01> {type="MAX_COMBO", symbols= [     x,          X,    NoSymbol,           7,   NoSymbol,     NoSymbol ]};
+        key <AB02> {type="MAX_COMBO", symbols= [     c,          C,   ampersand,           5,   NoSymbol,     NoSymbol ]};
+        key <AB03> {type="MAX_COMBO", symbols= [     v,          V,       minus,           3,   NoSymbol,     NoSymbol ]};
+        key <AB04> {type="MAX_COMBO", symbols= [     b,          B,    NoSymbol,    NoSymbol,   NoSymbol,     NoSymbol ]};
+        key <AB05> {[NoSymbol]};
+        key <AB06> {[NoSymbol]};
+        key <AB07> {type="MAX_COMBO", symbols= [     k,          K,    quotedbl,    quotedbl,      grave,     NoSymbol ]};
+        key <AB08> {type="MAX_COMBO", symbols= [     m,          M,    question,        plus,   NoSymbol,  bracketleft ]};
+        key <AB09> {type="MAX_COMBO", symbols= [ comma, underscore,    NoSymbol,    NoSymbol,   NoSymbol, bracketright ]};
+        key <AB10> {[Meta_L]};
+        key <RTSH> {[Control_R]};
 
         # Return Key
         key <RTRN> {[Return]};
-        key <> {[Return]};
- 
-        # Bottom Alphabetic Row
-        key <LFSH> {[Control_L]};
-        key <LSGT> {type="MAX_COMBO", symbols= [               z,               Z,         greater,               9                         ]};
-        key <AB01> {type="MAX_COMBO", symbols= [               x,               X,        NoSymbol,               7                         ]};
-        key <AB02> {type="MAX_COMBO", symbols= [               c,               C,       ampersand,               5                         ]};
-        key <AB03> {type="MAX_COMBO", symbols= [               v,               V,           minus,               3, NoSymbol, NoSymbol     ]};
-        key <AB04> {type="MAX_COMBO", symbols= [               b,               B,        NoSymbol,        NoSymbol                         ]};
-        key <AB05> {[NoSymbol]};
-        key <AB06> {[NoSymbol]};
-        key <AB07> {type="MAX_COMBO", symbols= [               k,               K,        quotedbl,        quotedbl, grave                  ]};
-        key <AB08> {type="MAX_COMBO", symbols= [               m,               M,        question,            plus, NoSymbol, bracketleft  ]};
-        key <AB09> {type="MAX_COMBO", symbols= [           comma,      underscore,        NoSymbol,        NoSymbol, NoSymbol, bracketright ]};
-        key <AB10> {[Meta_L]};
-        key <RTSH> {[Control_R]};
+        key <>     {[Return]};
 
         # Modifiers Row
         key <I151> {[XF86WakeUp]};
         key <LCTL> {[Super_L]};
         key <LWIN> {[Super_L]};
         key <LALT> {[ISO_Level5_Shift]};
-
         key <SPCE> {[Hyper_L]};
         key <RALT> {[ISO_Level3_Shift]};
         key <PRSC> {[Super_R]};

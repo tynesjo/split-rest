@@ -732,7 +732,7 @@ xkb_keymap {
         key  <END> {[End]};
         key  <INS> {[Insert]};
         key <DELE> {[Delete]};
-   
+  
         # Numbers Row 
         key  <TLDE> {type="MAX_COMBO", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key  <AE01> {[period]};
@@ -975,25 +975,25 @@ xkb_keymap {
         key   <KPEN> {[NoSymbol]};
         key   <I120> {[NoSymbol]};
         key   <AE13> {[NoSymbol]};
-        key   <I149> {[NoSymbol]};
-        key   <I154> {[NoSymbol]};
-        key   <I168> {[NoSymbol]};
-        key   <I178> {[NoSymbol]};
-        key   <I183> {[NoSymbol]};
-        key   <I184> {[NoSymbol]};
-        key   <FK19> {[NoSymbol]};
-        key   <FK24> {[NoSymbol]};
-        key   <I217> {[NoSymbol]};
-        key   <I219> {[NoSymbol]};
-        key   <I221> {[NoSymbol]};
-        key   <I222> {[NoSymbol]};
-        key   <I230> {[NoSymbol]};
-        key   <I247> {[NoSymbol]};
-        key   <I248> {[NoSymbol]};
-        key   <I249> {[NoSymbol]};
-        key   <I250> {[NoSymbol]};
-        key   <I252> {[NoSymbol]};
-        key   <I253> {[NoSymbol]};
+        key   <I149> {[Greek_alpha]};
+        key   <I154> {[Greek_beta]};
+        key   <I168> {[Greek_gamma]};
+        key   <I178> {[Greek_delta]};
+        key   <I183> {[Greek_epsilon]};
+        key   <I184> {[Greek_zeta]};
+        key   <FK19> {[Greek_eta]};
+        key   <FK24> {[Greek_theta]};
+        key   <I217> {[Greek_iota]};
+        key   <I219> {[Greek_kappa]};
+        key   <I221> {[Greek_lambda]};
+        key   <I222> {[Greek_mu]};
+        key   <I230> {[Greek_nu]};
+        key   <I247> {[Greek_xi]};
+        key   <I248> {[Greek_omicron]};
+        key   <I249> {[Greek_pi]};
+        key   <I250> {[Greek_rho]};
+        key   <I252> {[Greek_sigma]};
+        key   <I253> {[Greek_tau]};
     
         ###### Modifier Maps:
         modifier_map Control { <LFSH> };

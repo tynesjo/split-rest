@@ -798,7 +798,7 @@ xkb_keymap {
         key <RTRN> {[Return]};
         key <>     {[Return]};
 
-        # Modifiers Row
+        # Spacebar Row
         key <I151> {[XF86WakeUp]};
         key <LCTL> {[Super_L]};
         key <LWIN> {[Super_L]};
@@ -809,12 +809,12 @@ xkb_keymap {
         key <RCTL> {[Super_R]};
 
         # Navigation Keys Cluster 
-        key <PGUP> {[           Prior ] };
-        key <PGDN> {[            Next ] };
-        key   <UP> {[              Up ] };
-        key <LEFT> {[            Left ] };
-        key <RGHT> {[           Right ] };
-        key <DOWN> {[            Down ] };
+        key <PGUP> {[ Prior ]};
+        key <PGDN> {[ Next ]};
+        key   <UP> {[ Up ]};
+        key <LEFT> {[ Left ]};
+        key <RGHT> {[ Right ]};
+        key <DOWN> {[ Down ]};
 
 
         # Remainder
@@ -826,9 +826,7 @@ xkb_keymap {
         key <KPDV> {type="CTRL+ALT", symbols= [       KP_Divide,       KP_Divide,       KP_Divide,       KP_Divide,      XF86Ungrab ]};
         key <RWIN> {[NoSymbol]};
 
-
         key <LNFD> {         [        Linefeed ] };
-
 
         key <MUTE> {         [   XF86AudioMute ] };
         key <VOL-> {         [ XF86AudioLowerVolume ] };
@@ -868,7 +866,6 @@ xkb_keymap {
         key <I162> {         [    XF86TaskPane ] };
         key <I163> {         [        XF86Mail ] };
         key <I164> {         [   XF86Favorites ] };
-        modifier_map Mod3 { <AC12> };
         key <I165> {         [  XF86MyComputer ] };
         key <I166> {         [        XF86Back ] };
         key <I167> {         [     XF86Forward ] };
@@ -961,7 +958,9 @@ xkb_keymap {
         key   <KP3> {[NoSymbol]};
         key   <KP0> {[NoSymbol]};
         key   <KPDL> {[NoSymbol]};
+
         key   <AB11> {[NoSymbol]};
+
         key   <KATA> {[Tab]};
         key   <HIRA> {[space]};
         key   <HENK> {[slash]};
@@ -971,25 +970,27 @@ xkb_keymap {
         key   <KPEN> {[NoSymbol]};
         key   <I120> {[NoSymbol]};
         key   <AE13> {[NoSymbol]};
-        key   <I149> {[Greek_alpha]};
-        key   <I154> {[Greek_beta]};
-        key   <I168> {[Greek_gamma]};
-        key   <I178> {[Greek_delta]};
-        key   <I183> {[Greek_epsilon]};
-        key   <I184> {[Greek_zeta]};
-        key   <FK19> {[Greek_eta]};
-        key   <FK24> {[Greek_theta]};
-        key   <I217> {[Greek_iota]};
-        key   <I219> {[Greek_kappa]};
-        key   <I221> {[Greek_lambda]};
-        key   <I222> {[Greek_mu]};
-        key   <I230> {[Greek_nu]};
-        key   <I247> {[Greek_xi]};
-        key   <I248> {[Greek_omicron]};
-        key   <I249> {[Greek_pi]};
-        key   <I250> {[Greek_rho]};
-        key   <I252> {[Greek_sigma]};
-        key   <I253> {[Greek_tau]};
+
+        #### Greek Symbols (Used for Mapping to Trackpad (libinput-gestures))
+        key   <I149> {[ Greek_alpha ]};
+        key   <I154> {[ Greek_beta ]};
+        key   <I168> {[ Greek_gamma ]};
+        key   <I178> {[ Greek_delta ]};
+        key   <I183> {[ Greek_epsilon ]};
+        key   <I184> {[ Greek_zeta ]};
+        key   <FK19> {[ Greek_eta ]};
+        key   <FK24> {[ Greek_theta ]};
+        key   <I217> {[ Greek_iota ]};
+        key   <I219> {[ Greek_kappa ]};
+        key   <I221> {[ Greek_lambda ]};
+        key   <I222> {[ Greek_mu ]};
+        key   <I230> {[ Greek_nu ]};
+        key   <I247> {[ Greek_xi ]};
+        key   <I248> {[ Greek_omicron ]};
+        key   <I249> {[ Greek_pi ]};
+        key   <I250> {[ Greek_rho ]};
+        key   <I252> {[ Greek_sigma ]};
+        key   <I253> {[ Greek_tau ]};
     
         ###### Modifier Maps:
         modifier_map Control { <LFSH> };
@@ -1012,7 +1013,6 @@ xkb_keymap {
 
         modifier_map Mod3 { <AC12> };
         modifier_map Lock { <AB10> };
-
     };
 
     xkb_geometry "common" {

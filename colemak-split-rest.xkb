@@ -266,14 +266,11 @@ xkb_keymap {
 #            useModMapMods=level1;
 #            action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
 #        };
-
         interpret ISO_Level3_Shift+AnyOf(all) {
             virtualModifier= LevelThree;
             useModMapMods=level1;
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
-
-
         interpret Alt_L+AnyOf(all) {
             useModMapMods=level1;
             action = SetMods(modifiers=Mod1,clearLocks); 
@@ -282,10 +279,6 @@ xkb_keymap {
             useModMapMods=level1;
             action = SetMods(modifiers=Mod1,clearLocks); 
         };
-
-
-        # Meta
-
         interpret Meta_L+AnyOf(all) {
             virtualModifier=LevelFive;
             action= SetMods(modifiers=modMapMods,clearLocks);
@@ -300,9 +293,6 @@ xkb_keymap {
 #        interpret Meta_R+AnyOfOrNone(all) {
 #            action= SetMods(modifiers=Mod2,clearLocks);
 #        };
-
-
-
         interpret Super_L+AnyOf(all) {
             virtualModifier= Super;
             action= SetMods(modifiers=modMapMods,clearLocks);
@@ -311,7 +301,6 @@ xkb_keymap {
             virtualModifier= Super;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-
         interpret Hyper_L+AnyOf(all) {
             virtualModifier= Hyper;
             action= SetMods(modifiers=modMapMods,clearLocks);
@@ -320,20 +309,15 @@ xkb_keymap {
             virtualModifier= Meta;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-
-
-
         #interpret Scroll_Lock+AnyOf(all) {
         #    virtualModifier= ScrollLock;
         #    action= LockMods(modifiers=modMapMods);
         #};
-
         interpret ISO_Level5_Shift+AnyOf(all) {
             virtualModifier= LevelThree;
             useModMapMods=level1;
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
-
 #        interpret ISO_Level5_Latch+AnyOf(all) {
 #            virtualModifier= LevelThree;
 #            useModMapMods=level1;
@@ -352,8 +336,6 @@ xkb_keymap {
         interpret ISO_Level3_Shift+AnyOfOrNone(all) {
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
-
-
 #        interpret ISO_Group_Latch+AnyOfOrNone(all) {
 #            virtualModifier= AltGr;
 #            useModMapMods=level1;
@@ -375,11 +357,6 @@ xkb_keymap {
 #        interpret ISO_Last_Group+AnyOfOrNone(all) {
 #            action= LockGroup(group=2);
 #        };
-
-
-
-
-
         interpret F25+AnyOfOrNone(all) {
             repeat= True;
             action= SetPtrDflt(affect=button,button=1);
@@ -572,24 +549,18 @@ xkb_keymap {
             repeat= True;
             action= Private(type=0x86,data[0]=0x2d,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);
         };
-
-
         interpret ISO_Level5_Shift+AnyOfOrNone(all) {
             action= SetMods(modifiers=Meta,clearLocks);
         };
-
         interpret Any+AnyOf(all) {
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-
-
 #         interpret ISO_Level5_Latch+AnyOfOrNone(all) {
 #             action= LatchMods(modifiers=Meta,clearLocks,latchToLock);
 #        };
         #interpret ISO_Level5_Lock+AnyOfOrNone(all) {
         #    action= LockMods(modifiers=Meta);
         #};
-
         #interpret Caps_Lock+AnyOfOrNone(all) {
         #    action= LockMods(modifiers=Lock);
         #};
@@ -782,13 +753,13 @@ xkb_keymap {
 
         # Spacebar Row
         key <I151> {[XF86WakeUp]};
-        key <LCTL> {[Super_L]};
+        key <LCTL> {[Alt_L]};
         key <LWIN> {[Super_L]};
         key <LALT> {[ISO_Level5_Shift]};
         key <SPCE> {[Hyper_L]};
         key <RALT> {[ISO_Level3_Shift]};
         key <PRSC> {[Super_R]};
-        key <RCTL> {[Super_R]};
+        key <RCTL> {[Alt_R]};
 
         # Navigation Keys Cluster 
         key <PGUP> {[ Prior ]};
@@ -921,14 +892,14 @@ xkb_keymap {
         key <I251> {         [        NoSymbol ] };
         key <I254> {         [        XF86WWAN ] };
         key <I255> {         [      XF86RFKill ] };
-   
 
-        #### NoSymbol Mappings
-        key   <AB11> {[NoSymbol]};
-
+        #### Mappings needed for xcape allocation
         key   <KATA> {[Tab]};
         key   <HIRA> {[space]};
         key   <HENK> {[slash]};
+
+        #### NoSymbol Mappings
+        key   <AB11> {[NoSymbol]};
         key   <HKTG> {[NoSymbol]};
         key   <MUHE> {[NoSymbol]};
         key   <JPCM> {[NoSymbol]};
@@ -957,8 +928,7 @@ xkb_keymap {
         key   <I253> {[ Greek_tau ]};
     
         ###### Modifier Maps:
-        modifier_map Control { <LFSH> };
-        modifier_map Control { <RTSH> };
+        modifier_map Control { <LFSH>, <RTSH> };
 
         modifier_map Mod5 { <LALT> };
         modifier_map Mod5 { <RALT> };
@@ -970,15 +940,15 @@ xkb_keymap {
         modifier_map Mod4 { <LWIN> };
 
         # mod1 is the 'Alt' keysym
-        modifier_map Mod1 { <LCTL> };
-        modifier_map Mod1 { <RCTL> };
+        modifier_map Mod1 { <LCTL>, <RCTL> };
 
         # for numeric layer
-
         modifier_map Mod3 { <AC12> };
         modifier_map Lock { <AB10> };
     };
 
+
+    # Used only for visualization of layout:
     xkb_geometry "common" {
         width = 290;
         height = 100;

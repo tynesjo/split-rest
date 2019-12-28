@@ -755,27 +755,27 @@
         key <TAB>  {
             type="splitrest",
             symbols=[q,           Q,           asciicircum,  asciicircum,                              NoSymbol,    NoSymbol],
-            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD01> {
             type="splitrest",
             symbols=[w,           W,           NoSymbol,    8,                                        NoSymbol,    NoSymbol],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK22>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK22>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD02> {
             type="splitrest",
             symbols=[         f,           F,       slash,  6,                                        backslash,  bracketleft],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK20>, clearmods=Mod3),  NoAction(), NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK20>,clearmods=Mod3),  NoAction(), NoAction()]
         };
         key <AD03> {
             type="splitrest",
             symbols=[p,           P,           exclam,      4,                                        bar,         bracketright],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK17>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK17>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD04> {
             type="splitrest",
             symbols=[g,           G,           asciicircum,  asciicircum,                              NoSymbol,    NoSymbol],
-            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
@@ -786,22 +786,22 @@
         key <AD08> {
             type="splitrest",
             symbols=[l,           L,           numbersign,  numbersign,                               NoSymbol,    NoSymbol],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I148>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I148>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD09> {
             type="splitrest",
             symbols=[u,           U,           equal,       equal,                                    asciitilde,  u],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I150>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I150>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD10> {
             type="splitrest",
             symbols=[y,           Y,           dollar,      dollar,                                  EuroSign,   y],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I152>, clearmods=Mod3), NoAction(), NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I152>,clearmods=Mod3), NoAction(), NoAction()]
         };
         key <AD11> {
             type="splitrest",
             symbols=[colon,       semicolon,   ampersand,   ampersand,                                NoSymbol,    NoSymbol],
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I153>, clearmods=Mod3),  NoAction(),  NoAction()]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I153>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD12> {[NoSymbol]};
 
@@ -813,26 +813,50 @@
         };
         key <AC01> {type="splitrest",
             symbols=[          r,          R,   question,                                       2,   question,      greater ],
-            actions=[ NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK15>, clearmods=Mod3), NoAction(),    NoAction()]
+            actions=[ NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK15>,clearmods=Mod3), NoAction(),    NoAction()]
         };
         key <AC02> {type="splitrest",
             symbols=[         s,          S,  BackSpace,                                       1,   NoSymbol,  parenleft],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK14>, clearmods=Mod3), NoAction(), NoAction()]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK14>,clearmods=Mod3), NoAction(), NoAction()]
         };
         key <AC03> {
             type="splitrest",
-            symbols=[          t,          T, underscore,                                       0,   NoSymbol,   parenright ],
-            actions=[ NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK13>, clearmods=Mod3), NoAction(),    NoAction()]
+            symbols=[          t,          T, underscore,                                      0,    NoSymbol,   parenright ],
+            actions=[ NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK13>,clearmods=Mod3),  NoAction(),    NoAction()]
         };
 
-        key <AC04> {type="splitrest", symbols= [     d,          D,     percent,     percent,    percent,      percent ]};
+        key <AC04> {
+            type="splitrest",
+            symbols=[d,           D,           percent,     percent,                                   percent,     percent]
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I55>,clearmods=Mod3),  NoAction(),  NoAction()]
+        };
         key <AC05> {[NoSymbol]};
         key <AC06> {[NoSymbol]};
-        key <AC07> {type="splitrest", symbols= [     h,          H,        Left,    NoSymbol,   NoSymbol,     NoSymbol ]};
-        key <AC08> {type="splitrest", symbols= [     n,          N,        Down,       minus,   NoSymbol,    braceleft ]};
-        key <AC09> {type="splitrest", symbols= [     e,          E,          Up,        plus,   NoSymbol,   braceright ]};
-        key <AC10> {type="splitrest", symbols= [     i,          I,       Right,       slash,   NoSymbol,     NoSymbol ]};
-        key <AC11> {type="splitrest", symbols= [     o,          O,    asterisk,    asterisk,   NoSymbol,     NoSymbol ]};
+        key <AC07> {
+            type="splitrest",
+            symbols=[h,           H,           Left,        NoSymbol,    NoSymbol,    Symbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  NoAction(),  NoAction(),  NoAction()]
+        };
+        key <AC08> {
+            type="splitrest",
+            symbols=[n,           N,           Down,        minus,                                   NoSymbol,    braceleft],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I156>,clearmods=Mod3),  NoAction(),  NoAction()]
+        };
+        key <AC09> {
+            type="splitrest",
+            symbols=[e,           E,           Up,          plus,                                    NoSymbol,    braceright],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I157>,clearmods=Mod3),  NoAction(),  NoAction()]
+        };
+        key <AC10> {
+            type="splitrest",
+            symbols=[i,           I,           Right,       slash,                                   NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I158>,clearmods=Mod3),  NoAction(),  NoAction()]
+        };
+        key <AC11> {
+            type="splitrest",
+            symbols=[o,           O,           asterisk,    asterisk,                                NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I159>,clearmods=Mod3),  NoAction(),  NoAction()]
+        };
         key <BKSL> {[Hyper_R]};
 
 
@@ -842,30 +866,43 @@
         key <LSGT> {
             type="splitrest",
             symbols=[         z,          Z,    greater,                                       9,   NoSymbol,   NoSymbol],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>, clearmods=Mod3), NoAction(), NoAction()]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>,clearmods=Mod3), NoAction(), NoAction()]
         };
         key <AB01> {
             type="splitrest",
             symbols=[         x,          X,   NoSymbol,                                       7,   NoSymbol,      NoSymbol],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK21>, clearmods=Mod3), NoAction(),    NoAction()]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK21>,clearmods=Mod3), NoAction(),    NoAction()]
         };
         key <AB02> {
             type="splitrest",
             symbols=[         c,          C,  ampersand,                                       5,   NoSymbol,      NoSymbol],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK18>, clearmods=Mod3), NoAction(),    NoAction()]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK18>,clearmods=Mod3), NoAction(),    NoAction()]
         };
         key <AB03> {
             type="splitrest",
             symbols=[         v,          V,      minus,                                       3,   NoSymbol,      NoSymbol],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK16>, clearmods=Mod3), NoAction(),    NoAction()]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK16>,clearmods=Mod3), NoAction(),    NoAction()]
         };
 
-        key <AB04> {type="splitrest", symbols= [     b,          B,    NoSymbol,    NoSymbol,   NoSymbol,     NoSymbol ]};
+        key <AB04> {
+            type="splitrest",
+            symbols= [     b,          B,    NoSymbol,    NoSymbol,   NoSymbol,     NoSymbol],
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>,clearmods=Mod3), NoAction(), NoAction()]
+        };
         key <AB05> {[NoSymbol]};
         key <AB06> {[NoSymbol]};
-        key <AB07> {type="splitrest", symbols= [     k,          K,    quotedbl,    quotedbl,      grave,     NoSymbol ]};
-        key <AB08> {type="splitrest", symbols= [     m,          M,    question,        plus,   NoSymbol,  bracketleft ]};
-        key <AB09> {type="splitrest", symbols= [ comma, underscore,    NoSymbol,    NoSymbol,   NoSymbol, bracketright ]};
+        key <AB07> {
+            type="splitrest",
+            symbols= [     k,          K,    quotedbl,    quotedbl,      grave,     NoSymbol],
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>,clearmods=Mod3), NoAction(), NoAction()]
+        };
+        key <AB08> {
+            type="splitrest",
+            symbols= [     m,          M,    question,        plus,   NoSymbol,  bracketleft],
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>,clearmods=Mod3), NoAction(), NoAction()]
+        };
+        
+        key <AB09> {};
         key <AB10> {[Meta_L]};
         key <RTSH> {[Control_R]};
 

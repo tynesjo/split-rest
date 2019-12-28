@@ -827,14 +827,14 @@
 
         key <AC04> {
             type="splitrest",
-            symbols=[d,           D,           percent,     percent,                                   percent,     percent]
-            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I55>,clearmods=Mod3),  NoAction(),  NoAction()]
+            symbols=[d,           D,           percent,     percent,                                   percent,     percent],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I155>,clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AC05> {[NoSymbol]};
         key <AC06> {[NoSymbol]};
         key <AC07> {
             type="splitrest",
-            symbols=[h,           H,           Left,        NoSymbol,    NoSymbol,    Symbol],
+            symbols=[h,           H,           Left,        NoSymbol,    NoSymbol,    NoSymbol],
             actions=[NoAction(),  NoAction(),  NoAction(),  NoAction(),  NoAction(),  NoAction()]
         };
         key <AC08> {
@@ -901,8 +901,12 @@
             symbols= [     m,          M,    question,        plus,   NoSymbol,  bracketleft],
             actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK23>,clearmods=Mod3), NoAction(), NoAction()]
         };
-        
-        key <AB09> {};
+        key <AB09> {
+            type="splitrest",
+            symbols= [     comma,          underscore,    NoSymbol,        Nosymbol,   NoSymbol,  bracketright],
+            actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction()]
+        };
+
         key <AB10> {[Meta_L]};
         key <RTSH> {[Control_R]};
 

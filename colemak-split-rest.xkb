@@ -1,4 +1,4 @@
-xkb_keymap {
+  xkb_keymap {
 
     xkb_keycodes "evdev+aliases(qwerty)" {
         minimum = 8;
@@ -664,9 +664,9 @@ xkb_keymap {
 
     xkb_symbols "pc+us(colemak)+inet(evdev)" {
     
-        name[group1]="English (Colemak)";
+        name[group1]="splitRest(English (Colemak))";
 
-        # Number Keys For Use in Redirect
+        # Number Keys for Use in Redirect
         key <FK13> {[0]};
         key <FK14> {[1]};
         key <FK15> {[2]};
@@ -677,6 +677,44 @@ xkb_keymap {
         key <FK21> {[7]};
         key <FK22> {[8]};
         key <FK23> {[9]};
+        # Symbol Keys for Use in Redirect
+        key <I147> {[asciicircum]};
+        key <I148> {[numbersign]};
+        key <I150> {[equal]};
+        key <I152> {[dollar]};
+        key <I153> {[ampersand]};
+        key <I155> {[percent]};
+        key <I156> {[minus]};
+        key <I157> {[plus]};
+        key <I158> {[slash]};
+        key <I159> {[asterisk]};
+        key <I160> {[quotedbl]};
+        key <I161> {[]};
+        key <I162> {[]};
+        key <I163> {[]};
+        key <I164> {[]};
+        key <I165> {[]};
+        key <I166> {[]};
+        key <I167> {[]};
+        key <I169> {[]};
+        key <I170> {[]};
+        key <I171> {[]};
+        key <I172> {[]};
+        key <I173> {[]};
+        key <I174> {[]};
+        key <I175> {[]};
+        key <I176> {[]};
+        key <I177> {[]};
+        key <I179> {[]};
+        key <I180> {[]};
+        key <I181> {[]};
+        key <I182> {[]};
+        key <I185> {[]};
+        key <I186> {[]};
+        key <I187> {[]};
+        key <I188> {[]};
+        key <I189> {[]};
+        key <I190> {[]};
 
         # Function Keys Row
         key  <ESC> {[Escape]};
@@ -716,26 +754,28 @@ xkb_keymap {
         # Top Alphabetic Row 
         key <TAB>  {
             type="splitrest",
-            symbols= [     q,          Q, asciicircum, asciicircum,   NoSymbol,     NoSymbol ]
+            symbols=[q,           Q,           asciicircum,  asciicircum,                              NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD01> {
             type="splitrest",
-            symbols=[         w,          W,   NoSymbol,                                       8,   NoSymbol,   NoSymbol],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK22>, clearmods=Mod3), NoAction(), NoAction()]
+            symbols=[w,           W,           NoSymbol,    8,                                        NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK22>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD02> {
             type="splitrest",
-            symbols=[         f,          F,      slash,                                       6,  backslash, bracketleft],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK20>, clearmods=Mod3), NoAction(),  NoAction()]
+            symbols=[         f,           F,       slash,  6,                                        backslash,  bracketleft],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK20>, clearmods=Mod3),  NoAction(), NoAction()]
         };
         key <AD03> {
             type="splitrest",
-            symbols=[         p,          P,     exclam,                                       4,        bar, bracketright],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<FK17>, clearmods=Mod3), NoAction(),   NoAction()]
+            symbols=[p,           P,           exclam,      4,                                        bar,         bracketright],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<FK17>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD04> {
             type="splitrest",
-            symbols= [     g,          G, asciicircum, asciicircum,   NoSymbol,     NoSymbol ]
+            symbols=[g,           G,           asciicircum,  asciicircum,                              NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),   RedirectKey(key=<I147>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD05> {[NoSymbol]};
         key <AD06> {[NoSymbol]};
@@ -745,19 +785,23 @@ xkb_keymap {
         };
         key <AD08> {
             type="splitrest",
-            symbols= [     l,          L,  numbersign,  numbersign,   NoSymbol,     NoSymbol ]
+            symbols=[l,           L,           numbersign,  numbersign,                               NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I148>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD09> {
             type="splitrest",
-            symbols= [     u,          U,       equal,       equal, asciitilde,            u ]
+            symbols=[u,           U,           equal,       equal,                                    asciitilde,  u],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I150>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD10> {
             type="splitrest",
-            symbols= [     y,          Y,      dollar,      dollar,   EuroSign,            y ]
+            symbols=[y,           Y,           dollar,      dollar,                                  EuroSign,   y],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I152>, clearmods=Mod3), NoAction(), NoAction()]
         };
         key <AD11> {
             type="splitrest",
-            symbols= [ colon,  semicolon,   ampersand,   ampersand,   NoSymbol,     NoSymbol ]
+            symbols=[colon,       semicolon,   ampersand,   ampersand,                                NoSymbol,    NoSymbol],
+            actions=[NoAction(),  NoAction(),  NoAction(),  RedirectKey(key=<I153>, clearmods=Mod3),  NoAction(),  NoAction()]
         };
         key <AD12> {[NoSymbol]};
 
@@ -876,43 +920,6 @@ xkb_keymap {
         key <FIND> {[Find]};
         key  <CUT> {[XF86Cut]};
         key <HELP> {[Help]};
-        key <I147> {[XF86MenuKB]};
-        key <I148> {[XF86Calculator]};
-        key <I150> {[XF86Sleep]};
-        key <I152> {[XF86Explorer]};
-        key <I153> {[XF86Send]};
-        key <I155> {[XF86Xfer]};
-        key <I156> {[XF86Launch1]};
-        key <I157> {[XF86Launch2]};
-        key <I158> {[XF86WWW]};
-        key <I159> {[XF86DOS]};
-        key <I160> {[XF86ScreenSaver]};
-        key <I161> {[XF86RotateWindows]};
-        key <I162> {[XF86TaskPane]};
-        key <I163> {[XF86Mail]};
-        key <I164> {[XF86Favorites]};
-        key <I165> {[XF86MyComputer]};
-        key <I166> {[XF86Back]};
-        key <I167> {[XF86Forward]};
-        key <I169> {[XF86Eject]};
-        key <I170> {[XF86Eject, XF86Eject]};
-        key <I171> {[XF86AudioNext]};
-        key <I172> {[XF86AudioPlay, XF86AudioPause]};
-        key <I173> {[XF86AudioPrev]};
-        key <I174> {[XF86AudioStop, XF86Eject]};
-        key <I175> {[XF86AudioRecord]};
-        key <I176> {[XF86AudioRewind]};
-        key <I177> {[XF86Phone]};
-        key <I179> {[XF86Tools]};
-        key <I180> {[XF86HomePage]};
-        key <I181> {[XF86Reload]};
-        key <I182> {[XF86Close]};
-        key <I185> {[XF86ScrollUp]};
-        key <I186> {[XF86ScrollDown]};
-        key <I187> {[parenleft]};
-        key <I188> {[parenright]};
-        key <I189> {[XF86New]};
-        key <I190> {[Redo]};
         key <MDSW> {[     Mode_switch ] };
         key  <ALT> {[        NoSymbol,           Alt_L ] };
         key <META> {[        NoSymbol,          Meta_L ] };

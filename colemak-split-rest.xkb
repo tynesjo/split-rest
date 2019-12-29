@@ -718,12 +718,12 @@
         key <I174> {[grave]};
         key <I175> {[at]};
         key <I176> {[asciitilde]};
-        key <I177> {[]};
-        key <I179> {[]};
-        key <I180> {[]};
-        key <I181> {[]};
-        key <I182> {[]};
-        key <I185> {[]};
+        key <I177> {[aring]};
+        key <I179> {[Aring]};
+        key <I180> {[oslash]};
+        key <I181> {[Oslash]};
+        key <I182> {[ae]};
+        key <I185> {[AE]};
         key <I186> {[]};
         key <I187> {[]};
         key <I188> {[]};
@@ -907,8 +907,8 @@
         # Repurposing this key to provide Norwegian/Danish characters
         key <AB06> {
             type="norwegian_danish",
-            symbols=[aring,      Aring,      oslash,   Oslash,   ae,   AE],
-            actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction()]
+            symbols=[aring,      Aring,      oslash,     Oslash,     ae,                                     AE],
+            actions=[NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<I182>,clearmods=Mod4), RedirectKey(key=<I185>,clearmods=Mod4)]
         };
         key <AB07> {
             type="splitrest",

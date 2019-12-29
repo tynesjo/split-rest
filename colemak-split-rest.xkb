@@ -660,6 +660,20 @@
             level_name[Level5]="Mod3";
             level_name[Level6]="ModX";
         };
+        type "norwegian_danish" {
+            modifiers=Shift+Meta+LevelThree+LevelFive+Mod4;
+            map[Shift]=Level2;
+            map[LevelThree]=Level3;
+            map[LevelThree+Shift]=Level4;
+            map[Mod4]=Level5;
+            map[Mod4+Shift]=Level6;
+            level_name[Level1]="Base";
+            level_name[Level2]="Base+Shift";
+            level_name[Level3]="LevelThree";
+            level_name[Level4]="LevelThree+Shift";
+            level_name[Level5]="Mod4";
+            level_name[Level6]="Mod4+Shift";
+        };
     };
 
     xkb_symbols "pc+us(colemak)+inet(evdev)" {
@@ -859,7 +873,7 @@
         key <BKSL> {[Hyper_R]};
 
 
-        # Bottom Al phabetic Row
+        # Bottom Alphabetic Row
         key <LFSH> {[Control_L]};
 
         key <LSGT> {
@@ -888,8 +902,14 @@
             symbols=[b,          B,          NoSymbol,   NoSymbol,   NoSymbol,   NoSymbol],
             actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction()]
         };
+        
         key <AB05> {[NoSymbol]};
-        key <AB06> {[NoSymbol]};
+        # Repurposing this key to provide Norwegian/Danish characters
+        key <AB06> {
+            type="norwegian_danish",
+            symbols=[aring,      Aring,      oslash,   Oslash,   ae,   AE],
+            actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction()]
+        };
         key <AB07> {
             type="splitrest",
             symbols=[k,          K,          quotedbl,   quotedbl,                               grave,                                  NoSymbol],

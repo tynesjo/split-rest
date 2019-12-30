@@ -752,7 +752,7 @@
         # Numbers Row 
         key  <TLDE> {type="splitrest", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key  <AE01> {[period]};
-        key  <AE02> {[2]};
+        key  <AE02> {[Alt_L]};
         key  <AE03> {[3]};
         key  <AE04> {[4]};
         key  <AE05> {[5]};
@@ -760,7 +760,7 @@
         key  <AE07> {[7]};
         key  <AE08> {[8]};
         key  <AE09> {[9]};
-        key  <AE10> {[0]};
+        key  <AE10> {[Alt_R]};
         key  <AE11> {[less]};
         key  <AE12> {[Tab]};
         key  <BKSP> {[apostrophe]};
@@ -904,12 +904,8 @@
         };
         
         key <AB05> {[NoSymbol]};
-        # Repurposing this key to provide Norwegian/Danish characters
-        key <AB06> {
-            type="norwegian_danish",
-            symbols=[aring,      Aring,      oslash,     Oslash,     ae,                                     AE],
-            actions=[NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<I182>,clearmods=Mod4), RedirectKey(key=<I185>,clearmods=Mod4)]
-        };
+        # Using as "Compose" key:
+        key <AB06> {[Multi_key]};
         key <AB07> {
             type="splitrest",
             symbols=[k,          K,          quotedbl,   quotedbl,                               grave,                                  NoSymbol],
@@ -1060,7 +1056,7 @@
         # Mod1 is Meta (typically Alt), Mod5 is AltGr, Mod4 is Compose
         modifier_map Shift   {<SPCE>};
         modifier_map Control {<LFSH>,<RTSH>};
-        modifier_map Mod1    {<LCTL>,<RCTL>};
+        modifier_map Mod1    {<LCTL>,<RCTL>,<AE02>,<AE10>};
         modifier_map Mod4    {<PRSC>,<LWIN>};
         modifier_map Mod5    {<LALT>,<RALT>};
 

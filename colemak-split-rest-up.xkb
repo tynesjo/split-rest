@@ -969,14 +969,14 @@
 
 
         # Spacebar Row
-        key <I151> {[XF86WakeUp]};
-        key <LCTL> {[Alt_L]};
-        key <LWIN> {[Super_L]};
-        key <LALT> {[ISO_Level5_Shift]};
-        key <SPCE> {[Hyper_L]};
-        key <RALT> {[ISO_Level3_Shift]};
-        key <PRSC> {[Super_R]};
-        key <RCTL> {[Alt_R]};
+        #key <I151> {[XF86WakeUp]};
+        #key <LCTL> {[Alt_L]};
+        #key <LWIN> {[Super_L]};
+        #key <LALT> {[ISO_Level5_Shift]};
+        #key <SPCE> {[Hyper_L]};
+        #key <RALT> {[ISO_Level3_Shift]};
+        #key <PRSC> {[Super_R]};
+        #key <RCTL> {[Alt_R]};
 
         # Navigation Keys Cluster 
         key <PGUP> {[Prior]};

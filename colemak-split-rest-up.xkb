@@ -263,80 +263,30 @@
         interpret.repeat=False;
         interpret.locking=False;
 
-        interpret F25+AnyOfOrNone(all) {
-            repeat=True;
-            action=SetPtrDflt(affect=button,button=1);
-        };
-        interpret F26+AnyOfOrNone(all) {
-            repeat=True;
-            action=SetPtrDflt(affect=button,button=2);
-        };
-        interpret F27+AnyOfOrNone(all) {
-            repeat=True; action=MovePtr(x=-1,y=-1);
-        };
-        interpret F29+AnyOfOrNone(all) {
-            repeat=True; action=MovePtr(x=+1,y=-1);
-        };
-        interpret F31+AnyOfOrNone(all) {
-            repeat=True; action=PtrBtn(button=default);
-        };
-        interpret F33+AnyOfOrNone(all) {
-            repeat=True; action=MovePtr(x=-1,y=+1);
-        };
-        interpret F35+AnyOfOrNone(all) {
-            repeat= True; action= MovePtr(x=+1,y=+1);
-        };
-        interpret XF86Switch_VT_1+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=1,!same);
-        };
-        interpret XF86Switch_VT_2+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=2,!same);
-        };
-        interpret XF86Switch_VT_3+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=3,!same);
-        };
-        interpret XF86Switch_VT_4+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=4,!same);
-        };
-        interpret XF86Switch_VT_5+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=5,!same);
-        };
-        interpret XF86Switch_VT_6+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=6,!same);
-        }   ;
-        interpret XF86Switch_VT_7+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=7,!same);
-        };
-        interpret XF86Switch_VT_8+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=8,!same);
-        };
-        interpret XF86Switch_VT_9+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=9,!same);
-        };
-        interpret XF86Switch_VT_10+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=10,!same);
-        };
-        interpret XF86Switch_VT_11+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=11,!same);
-        };
-        interpret XF86Switch_VT_12+AnyOfOrNone(all) {
-            repeat= True; action= SwitchScreen(screen=12,!same);
-        };
-        interpret XF86LogGrabInfo+AnyOfOrNone(all) {
-            repeat= True; action= Private(type=0x86,data[0]=0x50,data[1]=0x72,data[2]=0x47,data[3]=0x72,data[4]=0x62,data[5]=0x73,data[6]=0x00);
-        };
-        interpret XF86LogWindowTree+AnyOfOrNone(all) {
-            repeat= True; action= Private(type=0x86,data[0]=0x50,data[1]=0x72,data[2]=0x57,data[3]=0x69,data[4]=0x6e,data[5]=0x73,data[6]=0x00);
-        };
-        interpret XF86Next_VMode+AnyOfOrNone(all) {
-            repeat= True; action= Private(type=0x86,data[0]=0x2b,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);
-        };
-        interpret XF86Prev_VMode+AnyOfOrNone(all) {
-            repeat= True; action= Private(type=0x86,data[0]=0x2d,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);
-        };
-        interpret Any+AnyOf(all) {
-            action= SetMods(modifiers=modMapMods,clearLocks);
-        };
+        interpret F25+AnyOfOrNone(all) {repeat=True; action=SetPtrDflt(affect=button,button=1);};
+        interpret F26+AnyOfOrNone(all) {repeat=True; action=SetPtrDflt(affect=button,button=2);};
+        interpret F27+AnyOfOrNone(all) {repeat=True; action=MovePtr(x=-1,y=-1);};
+        interpret F29+AnyOfOrNone(all) {repeat=True; action=MovePtr(x=+1,y=-1);};
+        interpret F31+AnyOfOrNone(all) {repeat=True; action=PtrBtn(button=default);};
+        interpret F33+AnyOfOrNone(all) {repeat=True; action=MovePtr(x=-1,y=+1);};
+        interpret F35+AnyOfOrNone(all) {repeat= True; action= MovePtr(x=+1,y=+1);};
+        interpret XF86Switch_VT_1+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=1,!same);};
+        interpret XF86Switch_VT_2+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=2,!same);};
+        interpret XF86Switch_VT_3+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=3,!same);};
+        interpret XF86Switch_VT_4+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=4,!same);};
+        interpret XF86Switch_VT_5+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=5,!same);};
+        interpret XF86Switch_VT_6+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=6,!same);};
+        interpret XF86Switch_VT_7+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=7,!same);};
+        interpret XF86Switch_VT_8+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=8,!same);};
+        interpret XF86Switch_VT_9+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=9,!same);};
+        interpret XF86Switch_VT_10+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=10,!same);};
+        interpret XF86Switch_VT_11+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=11,!same);};
+        interpret XF86Switch_VT_12+AnyOfOrNone(all) {repeat= True; action= SwitchScreen(screen=12,!same);};
+        interpret XF86LogGrabInfo+AnyOfOrNone(all) {repeat= True; action= Private(type=0x86,data[0]=0x50,data[1]=0x72,data[2]=0x47,data[3]=0x72,data[4]=0x62,data[5]=0x73,data[6]=0x00);};
+        interpret XF86LogWindowTree+AnyOfOrNone(all) {repeat= True; action= Private(type=0x86,data[0]=0x50,data[1]=0x72,data[2]=0x57,data[3]=0x69,data[4]=0x6e,data[5]=0x73,data[6]=0x00);};
+        interpret XF86Next_VMode+AnyOfOrNone(all) {repeat= True; action= Private(type=0x86,data[0]=0x2b,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);};
+        interpret XF86Prev_VMode+AnyOfOrNone(all) {repeat= True; action= Private(type=0x86,data[0]=0x2d,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);};
+        interpret Any+AnyOf(all) {action= SetMods(modifiers=modMapMods,clearLocks);};
     };
     
     xkb_types "complete" {

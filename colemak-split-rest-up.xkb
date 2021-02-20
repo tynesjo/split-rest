@@ -258,9 +258,7 @@
         virtual_modifiers
           Alt,
           LevelThree,
-          #LevelFive,
           Meta,
-          Super,
           Hyper;
     
         interpret.useModMapMods=AnyLevel;
@@ -272,15 +270,6 @@
             useModMapMods=level1;
             action=SetMods(modifiers=LevelThree,clearLocks);
         };
-        ### Control keys: ------------
-        interpret Alt_L+AnyOf(all) {action=SetMods(modifiers=Mod1,clearLocks);};
-        interpret Alt_R+AnyOf(all) {action=SetMods(modifiers=Mod1,clearLocks);};
-
-        #interpret Meta_L+AnyOf(all) {virtualModifier=LevelFive; action= SetMods(modifiers=modMapMods,clearLocks);};
-
-        ### Super Keys: --------------
-        interpret Super_L+AnyOf(all) {virtualModifier=Super; action=SetMods(modifiers=modMapMods,clearLocks);};
-        interpret Super_R+AnyOf(all) {virtualModifier=Super; action=SetMods(modifiers=modMapMods,clearLocks);};
 
         interpret Hyper_L+AnyOf(all) {virtualModifier=Hyper; action=SetMods(modifiers=modMapMods,clearLocks);};
         interpret Hyper_R+AnyOf(all) {virtualModifier=Meta;  action=SetMods(modifiers=modMapMods,clearLocks);};
@@ -326,8 +315,6 @@
             repeat= True;
             action= MovePtr(x=+1,y=+1);
         };
-
-
 
         interpret XF86Switch_VT_1+AnyOfOrNone(all) {
             repeat= True;
@@ -404,9 +391,7 @@
           Alt,
           LevelThree,
           LevelTwo,
-          #LevelFive,
           Meta,
-          Super,
           Hyper;
     
         type "ONE_LEVEL"  {modifiers=none; level_name[Level1]="Any";};            
@@ -713,11 +698,11 @@
         # Spacebar Row =========================================================================================================
         key <I151> {[XF86WakeUp]};
         key <LCTL> {[Alt_L]};
-        key <LWIN> {[Super_L]};
+        key <LWIN> {[NoSymbol]};
         key <LALT> {[ISO_Level5_Shift]};
         key <SPCE> {[Num_Lock]};
         key <RALT> {[ISO_Level3_Shift]};
-        key <PRSC> {[Super_R]};
+        key <PRSC> {[NoSymbol]};
         key <RCTL> {[Alt_R]};
 
         # Navigation Island ====================================================================================================
@@ -840,7 +825,7 @@
         modifier_map Mod1    {<LSGT>,<RTSH>};
         modifier_map Mod2    {<SPCE>};
         modifier_map Mod3    {<RTRN>,<TAB>};
-        modifier_map Mod4    {<PRSC>,<LWIN>,<AB01>,<AB10>};
+        modifier_map Mod4    {<AB01>,<AB10>};
         modifier_map Mod5    {<LALT>,<RALT>,<AB02>,<AB09>};
         modifier_map Lock    {<AC11>};
     };

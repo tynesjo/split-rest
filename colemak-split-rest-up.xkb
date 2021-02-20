@@ -261,10 +261,6 @@
         interpret.repeat= False;
         interpret.locking= False;
 
-#        interpret ISO_Level2_Latch+Exactly(Shift) {
-#            useModMapMods=level1;
-#            action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
-#        };
         interpret ISO_Level3_Shift+AnyOf(all) {
             virtualModifier= LevelThree;
             useModMapMods=level1;
@@ -286,12 +282,6 @@
             virtualModifier=ScrollLock;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-#        interpret Meta_L+AnyOfOrNone(all) {
-#            action= SetMods(modifiers=Lock,clearLocks);
-#        };
-#        interpret Meta_R+AnyOfOrNone(all) {
-#            action= SetMods(modifiers=Lock,clearLocks);
-#        };
         interpret Super_L+AnyOf(all) {
             virtualModifier= Super;
             action= SetMods(modifiers=modMapMods,clearLocks);
@@ -308,52 +298,17 @@
             virtualModifier= Meta;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-        #interpret Scroll_Lock+AnyOf(all) {
-        #    virtualModifier= ScrollLock;
-        #    action= LockMods(modifiers=modMapMods);
-        #};
         interpret ISO_Level5_Shift+AnyOf(all) {
             virtualModifier= LevelThree;
             useModMapMods=level1;
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
-#        interpret ISO_Level5_Latch+AnyOf(all) {
-#            virtualModifier= LevelThree;
-#            useModMapMods=level1;
-#            action= LatchMods(modifiers=LevelThree,clearLocks,latchToLock);
-#        };
-#        interpret ISO_Level5_Lock+AnyOf(all) {
-#            virtualModifier= LevelThree;
-#            useModMapMods=level1;
-#            action= LockMods(modifiers=LevelThree);
-#        };
         interpret Mode_switch+AnyOfOrNone(all) {
             action= SetMods(modifiers=LevelTwo,clearLocks);
         };
         interpret ISO_Level3_Shift+AnyOfOrNone(all) {
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
-#        interpret ISO_Group_Latch+AnyOfOrNone(all) {
-#            virtualModifier= AltGr;
-#            useModMapMods=level1;
-#            action= LatchGroup(group=2);
-#        };
-#        interpret ISO_Next_Group+AnyOfOrNone(all) {
-#            virtualModifier= AltGr;
-#            useModMapMods=level1;
-#            action= LockGroup(group=+1);
-#        };
-#        interpret ISO_Prev_Group+AnyOfOrNone(all) {
-#            virtualModifier= AltGr;
-#            useModMapMods=level1;
-#            action= LockGroup(group=-1);
-#        };
-#        interpret ISO_First_Group+AnyOfOrNone(all) {
-#            action= LockGroup(group=1);
-#        };
-#        interpret ISO_Last_Group+AnyOfOrNone(all) {
-#            action= LockGroup(group=2);
-#        };
         interpret F25+AnyOfOrNone(all) {
             repeat= True;
             action= SetPtrDflt(affect=button,button=1);
@@ -382,91 +337,6 @@
             repeat= True;
             action= MovePtr(x=+1,y=+1);
         };
-#        interpret Pointer_Button_Dflt+AnyOfOrNone(all) {
-#            action= PtrBtn(button=default);
-#        };
-#        interpret Pointer_Button1+AnyOfOrNone(all) {
-#            action= PtrBtn(button=1);
-#        };
-#        interpret Pointer_Button2+AnyOfOrNone(all) {
-#            action= PtrBtn(button=2);
-#        };
-#        interpret Pointer_Button3+AnyOfOrNone(all) {
-#            action= PtrBtn(button=3);
-#        };
-#        interpret Pointer_DblClick_Dflt+AnyOfOrNone(all) {
-#            action= PtrBtn(button=default,count=2);
-#        };
-#        interpret Pointer_DblClick1+AnyOfOrNone(all) {
-#            action= PtrBtn(button=1,count=2);
-#        };
-#        interpret Pointer_DblClick2+AnyOfOrNone(all) {
-#            action= PtrBtn(button=2,count=2);
-#        };
-#        interpret Pointer_DblClick3+AnyOfOrNone(all) {
-#            action= PtrBtn(button=3,count=2);
-#        };
-#        interpret Pointer_Drag_Dflt+AnyOfOrNone(all) {
-#            action= LockPtrBtn(button=default,affect=both);
-#        };
-#        interpret Pointer_Drag1+AnyOfOrNone(all) {
-#            action= LockPtrBtn(button=1,affect=both);
-#        };
-#        interpret Pointer_Drag2+AnyOfOrNone(all) {
-#            action= LockPtrBtn(button=2,affect=both);
-#        };
-#        interpret Pointer_Drag3+AnyOfOrNone(all) {
-#            action= LockPtrBtn(button=3,affect=both);
-#        };
-#        interpret Pointer_EnableKeys+AnyOfOrNone(all) {
-#            action= LockControls(controls=MouseKeys);
-#        };
-#        interpret Pointer_Accelerate+AnyOfOrNone(all) {
-#            action= LockControls(controls=MouseKeysAccel);
-#        };
-#        interpret Pointer_DfltBtnNext+AnyOfOrNone(all) {
-#            action= SetPtrDflt(affect=button,button=+1);
-#        };
-#        interpret Pointer_DfltBtnPrev+AnyOfOrNone(all) {
-#            action= SetPtrDflt(affect=button,button=-1);
-#        };
-#        interpret AccessX_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=AccessXKeys);
-#        };
-#        interpret AccessX_Feedback_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=AccessXFeedback);
-#        };
-#        interpret RepeatKeys_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=RepeatKeys);
-#        };
-#        interpret SlowKeys_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=SlowKeys);
-#        };
-#        interpret BounceKeys_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=BounceKeys);
-#        };
-#        interpret StickyKeys_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=StickyKeys);
-#        };
-#        interpret MouseKeys_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=MouseKeys);
-#        };
-#        interpret MouseKeys_Accel_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=MouseKeysAccel);
-#        };
-#        interpret Overlay1_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=Overlay1);
-#        };
-#        interpret Overlay2_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=Overlay2);
-#        };
-#        interpret AudibleBell_Enable+AnyOfOrNone(all) {
-#            action= LockControls(controls=AudibleBell);
-#        };
-#        interpret Terminate_Server+AnyOfOrNone(all) {
-#            action= Terminate();
-#        };
-
         interpret Super_L+AnyOfOrNone(all) {
             action= SetMods(modifiers=Super,clearLocks);
         };
@@ -476,9 +346,6 @@
         interpret Hyper_L+AnyOfOrNone(all) {
             action= SetMods(modifiers=Hyper,clearLocks);
         };
-    #    interpret Hyper_R+AnyOfOrNone(all) {
-    #        action= SetMods(modifiers=Hyper,clearLocks);
-    #    };
         interpret Shift_L+AnyOfOrNone(all) {
             action= SetMods(modifiers=Shift,clearLocks);
         };
@@ -552,48 +419,6 @@
         interpret Any+AnyOf(all) {
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-#         interpret ISO_Level5_Latch+AnyOfOrNone(all) {
-#             action= LatchMods(modifiers=Meta,clearLocks,latchToLock);
-#        };
-        #interpret ISO_Level5_Lock+AnyOfOrNone(all) {
-        #    action= LockMods(modifiers=Meta);
-        #};
-        #interpret Caps_Lock+AnyOfOrNone(all) {
-        #    action= LockMods(modifiers=Lock);
-        #};
-        #interpret Any+Exactly(Lock) {
-        #    action= LockMods(modifiers=Lock);
-        #};
-#        group 2 = AltGr;
-#        group 3 = AltGr;
-#        group 4 = AltGr;
-#        indicator "Caps Lock" {
-#            !allowExplicit;
-#            whichModState= locked;
-#            modifiers= Lock;
-#        };
-#        indicator "Num Lock" {
-#            !allowExplicit;
-#            whichModState= locked;
-#            modifiers= NumLock;
-#        };
-#        indicator "Scroll Lock" {
-#            whichModState= locked;
-#            modifiers= ScrollLock;
-#        };
-#        indicator "Shift Lock" {
-#            !allowExplicit;
-#            whichModState= locked;
-#            modifiers= Shift;
-#        };
-#        indicator "Group 2" {
-#            !allowExplicit;
-#            groups= 0xfe;
-#        };
-#        indicator "Mouse Keys" {
-#            indicatorDrivesKeyboard;
-#            controls= mouseKeys;
-#        };
     };
     
     xkb_types "complete" {
@@ -776,9 +601,10 @@
             symbols=[g,          G,          asciicircum, asciicircum,                            NoSymbol,   NoSymbol],
             actions=[NoAction(), NoAction(), NoAction(),  RedirectKey(key=<I147>,clearmods=Mod3), NoAction(), NoAction()]
         };
-        # FIXME        key <AE06> {[NoSymbol]};
-        key  <AE06> {type="splitrest", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
+
+        key <AE06> {type="splitrest", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key <AE07> {[NoSymbol]};
+
         key <AE08> {
             type="splitrest",
             symbols=[j, J, NoSymbol, NoSymbol, NoSymbol, NoSymbol]
@@ -860,11 +686,9 @@
             symbols=[o,          O,          asterisk,   asterisk,                               NoSymbol,   NoSymbol],
             actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<I159>,clearmods=Mod3), NoAction(), NoAction()]
         };
-        #key <BKSL> {[Hyper_R]};
 
     
         ### Middle Alphabetic Row ==============================================================================================
-        
         key <CAPS> {[Control_L]};
 
         key <AC01> {
@@ -939,7 +763,6 @@
 
         # Return Key ===========================================================================================================
         key <RTRN> {[Hyper_R]};
-        key <>     {[Hyper_R]};
 
         # Spacebar Row =========================================================================================================
         key <I151> {[XF86WakeUp]};

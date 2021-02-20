@@ -255,83 +255,88 @@
     
     xkb_compatibility "complete" {
     
-        virtual_modifiers NumLock,Alt,LevelThree,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
+        virtual_modifiers
+          Alt,
+          LevelThree,
+          LevelFive,
+          Meta,
+          Super,
+          Hyper;
     
-        interpret.useModMapMods= AnyLevel;
-        interpret.repeat= False;
-        interpret.locking= False;
+        interpret.useModMapMods=AnyLevel;
+        interpret.repeat=False;
+        interpret.locking=False;
 
         interpret ISO_Level3_Shift+AnyOf(all) {
-            virtualModifier= LevelThree;
+            virtualModifier=LevelThree;
             useModMapMods=level1;
-            action= SetMods(modifiers=LevelThree,clearLocks);
+            action=SetMods(modifiers=LevelThree,clearLocks);
         };
         interpret Alt_L+AnyOf(all) {
             useModMapMods=level1;
-            action = SetMods(modifiers=Mod1,clearLocks); 
+            action=SetMods(modifiers=Mod1,clearLocks); 
         };
         interpret Alt_R+AnyOf(all) {
             useModMapMods=level1;
-            action = SetMods(modifiers=Mod1,clearLocks); 
+            action=SetMods(modifiers=Mod1,clearLocks); 
         };
         interpret Meta_L+AnyOf(all) {
             virtualModifier=LevelFive;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-        interpret Meta_R+AnyOf(all) {
-            virtualModifier=ScrollLock;
-            action= SetMods(modifiers=modMapMods,clearLocks);
-        };
         interpret Super_L+AnyOf(all) {
-            virtualModifier= Super;
-            action= SetMods(modifiers=modMapMods,clearLocks);
+            virtualModifier=Super;
+            action=SetMods(modifiers=modMapMods,clearLocks);
         };
         interpret Super_R+AnyOf(all) {
-            virtualModifier= Super;
-            action= SetMods(modifiers=modMapMods,clearLocks);
+            virtualModifier=Super;
+            action=SetMods(modifiers=modMapMods,clearLocks);
         };
         interpret Hyper_L+AnyOf(all) {
-            virtualModifier= Hyper;
-            action= SetMods(modifiers=modMapMods,clearLocks);
+            virtualModifier=Hyper;
+            action=SetMods(modifiers=modMapMods,clearLocks);
         };
         interpret Hyper_R+AnyOf(all) {
-            virtualModifier= Meta;
-            action= SetMods(modifiers=modMapMods,clearLocks);
+            virtualModifier=Meta;
+            action=SetMods(modifiers=modMapMods,clearLocks);
         };
         interpret ISO_Level5_Shift+AnyOf(all) {
-            virtualModifier= LevelThree;
+            virtualModifier=LevelThree;
             useModMapMods=level1;
-            action= SetMods(modifiers=LevelThree,clearLocks);
+            action=SetMods(modifiers=LevelThree,clearLocks);
+        };
+        interpret ISO_Level5_Shift+AnyOfOrNone(all) {
+            action=SetMods(modifiers=Meta,clearLocks);
         };
         interpret Mode_switch+AnyOfOrNone(all) {
-            action= SetMods(modifiers=LevelTwo,clearLocks);
+            action=SetMods(modifiers=LevelTwo,clearLocks);
         };
         interpret ISO_Level3_Shift+AnyOfOrNone(all) {
-            action= SetMods(modifiers=LevelThree,clearLocks);
+            action=SetMods(modifiers=LevelThree,clearLocks);
         };
         interpret F25+AnyOfOrNone(all) {
-            repeat= True;
-            action= SetPtrDflt(affect=button,button=1);
+            repeat=True;
+            action=SetPtrDflt(affect=button,button=1);
         };
         interpret F26+AnyOfOrNone(all) {
-            repeat= True;
-            action= SetPtrDflt(affect=button,button=2);
+            repeat=True;
+            action=SetPtrDflt(affect=button,button=2);
         };
         interpret F27+AnyOfOrNone(all) {
-            repeat= True;
-            action= MovePtr(x=-1,y=-1);
+            repeat=True;
+            action=MovePtr(x=-1,y=-1);
         };
         interpret F29+AnyOfOrNone(all) {
-            repeat= True;
-            action= MovePtr(x=+1,y=-1);
+            repeat=True;
+            action=MovePtr(x=+1,y=-1);
         };
         interpret F31+AnyOfOrNone(all) {
-            repeat= True;
-            action= PtrBtn(button=default);
+            repeat=True;
+            action=PtrBtn(button=default);
         };
         interpret F33+AnyOfOrNone(all) {
-            repeat= True;
-            action= MovePtr(x=-1,y=+1);
+            repeat=True;
+            action=MovePtr(x=-1,y=+1);
         };
         interpret F35+AnyOfOrNone(all) {
             repeat= True;
@@ -413,9 +418,6 @@
             repeat= True;
             action= Private(type=0x86,data[0]=0x2d,data[1]=0x56,data[2]=0x4d,data[3]=0x6f,data[4]=0x64,data[5]=0x65,data[6]=0x00);
         };
-        interpret ISO_Level5_Shift+AnyOfOrNone(all) {
-            action= SetMods(modifiers=Meta,clearLocks);
-        };
         interpret Any+AnyOf(all) {
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
@@ -423,52 +425,35 @@
     
     xkb_types "complete" {
     
-          virtual_modifiers NumLock,Alt,LevelThree,LevelTwo,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
+        virtual_modifiers
+          Alt,
+          LevelThree,
+          LevelTwo,
+          LevelFive,
+          Meta,
+          Super,
+          Hyper;
     
-        type "ONE_LEVEL" {
-            modifiers= none;
-            level_name[Level1]= "Any";
-        };
-        type "TWO_LEVEL" {
-            modifiers= Shift;
-            map[Shift]= Level2;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-        };
-        type "KEYPAD" {
-            modifiers= Shift+NumLock;
-            map[Shift]= Level2;
-            map[NumLock]= Level2;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Number";
-        };
-        type "ALPHABETIC" {
-            modifiers= Shift+Lock;
-            map[Shift]= Level2;
-            map[Lock]= Level2;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Caps";
-        };
-        type "SHIFT+ALT" {
-            modifiers= Shift+Alt;
-            map[Shift+Alt]= Level2;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift+Alt";
-        };
+        type "ONE_LEVEL"  {modifiers=none; level_name[Level1]="Any";};            
+        type "TWO_LEVEL"  {modifiers=none; level_name[Level1]="Any";};            
+        type "KEYPAD"     {modifiers=none; level_name[Level1]="Any";};
+        type "ALPHABETIC" {modifiers=none; level_name[Level1]="Any";};
+
         type "CTRL+ALT" {
-            modifiers= Shift+Control+Alt+LevelThree;
-            map[Shift]= Level2;
-            preserve[Shift]= Shift;
-            map[LevelThree]= Level3;
-            map[Shift+LevelThree]= Level4;
-            preserve[Shift+LevelThree]= Shift;
-            map[Control+Alt]= Level5;
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Alt Base";
-            level_name[Level4]= "Shift Alt";
-            level_name[Level5]= "Ctrl+Alt";
+            modifiers=Shift+Control+Alt+LevelThree;
+            map[Shift]=Level2;
+            preserve[Shift]=Shift;
+            map[LevelThree]=Level3;
+            map[Shift+LevelThree]=Level4;
+            preserve[Shift+LevelThree]=Shift;
+            map[Control+Alt]=Level5;
+            level_name[Level1]="Base";
+            level_name[Level2]="Shift";
+            level_name[Level3]="Alt Base";
+            level_name[Level4]="Shift Alt";
+            level_name[Level5]="Ctrl+Alt";
         };
+
         type "splitrest" {
             modifiers=Shift+Meta+LevelThree+LevelFive+Mod4;
             map[Shift]=Level2;
@@ -483,21 +468,8 @@
             level_name[Level5]="Mod3";
             level_name[Level6]="ModX";
         };
-        type "norwegian_danish" {
-            modifiers=Shift+Meta+LevelThree+LevelFive+Mod4;
-            map[Shift]=Level2;
-            map[LevelThree]=Level3;
-            map[LevelThree+Shift]=Level4;
-            map[Mod4]=Level5;
-            map[Mod4+Shift]=Level6;
-            level_name[Level1]="Base";
-            level_name[Level2]="Base+Shift";
-            level_name[Level3]="LevelThree";
-            level_name[Level4]="LevelThree+Shift";
-            level_name[Level5]="Mod4";
-            level_name[Level6]="Mod4+Shift";
-        };
     };
+
 
     xkb_symbols "pc+us(colemak)+inet(evdev)" {
     
@@ -633,7 +605,6 @@
         
 
         # Top Alphabetic Row ===================================================================================================
-
         key <TAB> {[Hyper_R]};
         
         key <AD01> {type="splitrest",
@@ -853,7 +824,7 @@
         key <I254> {[XF86WWAN]};
         key <I255> {[XF86RFKill]};
 
-        #### Mappings needed for xcape allocation
+        #### Mappings needed for xcape allocation ============================================================================== 
         key <KATA> {[Tab]};
         key <HIRA> {[space]};
         key <HENK> {[slash]};

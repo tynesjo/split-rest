@@ -258,7 +258,7 @@
         virtual_modifiers
           Alt,
           LevelThree,
-          LevelFive,
+          #LevelFive,
           Meta,
           Super,
           Hyper;
@@ -272,34 +272,19 @@
             useModMapMods=level1;
             action=SetMods(modifiers=LevelThree,clearLocks);
         };
-        interpret Alt_L+AnyOf(all) {
-            useModMapMods=level1;
-            action=SetMods(modifiers=Mod1,clearLocks); 
-        };
-        interpret Alt_R+AnyOf(all) {
-            useModMapMods=level1;
-            action=SetMods(modifiers=Mod1,clearLocks); 
-        };
-        interpret Meta_L+AnyOf(all) {
-            virtualModifier=LevelFive;
-            action= SetMods(modifiers=modMapMods,clearLocks);
-        };
-        interpret Super_L+AnyOf(all) {
-            virtualModifier=Super;
-            action=SetMods(modifiers=modMapMods,clearLocks);
-        };
-        interpret Super_R+AnyOf(all) {
-            virtualModifier=Super;
-            action=SetMods(modifiers=modMapMods,clearLocks);
-        };
-        interpret Hyper_L+AnyOf(all) {
-            virtualModifier=Hyper;
-            action=SetMods(modifiers=modMapMods,clearLocks);
-        };
-        interpret Hyper_R+AnyOf(all) {
-            virtualModifier=Meta;
-            action=SetMods(modifiers=modMapMods,clearLocks);
-        };
+        ### Control keys: ------------
+        interpret Alt_L+AnyOf(all) {action=SetMods(modifiers=Mod1,clearLocks);};
+        interpret Alt_R+AnyOf(all) {action=SetMods(modifiers=Mod1,clearLocks);};
+
+        #interpret Meta_L+AnyOf(all) {virtualModifier=LevelFive; action= SetMods(modifiers=modMapMods,clearLocks);};
+
+        ### Super Keys: --------------
+        interpret Super_L+AnyOf(all) {virtualModifier=Super; action=SetMods(modifiers=modMapMods,clearLocks);};
+        interpret Super_R+AnyOf(all) {virtualModifier=Super; action=SetMods(modifiers=modMapMods,clearLocks);};
+
+        interpret Hyper_L+AnyOf(all) {virtualModifier=Hyper; action=SetMods(modifiers=modMapMods,clearLocks);};
+        interpret Hyper_R+AnyOf(all) {virtualModifier=Meta;  action=SetMods(modifiers=modMapMods,clearLocks);};
+
         interpret ISO_Level5_Shift+AnyOf(all) {
             virtualModifier=LevelThree;
             useModMapMods=level1;
@@ -308,12 +293,11 @@
         interpret ISO_Level5_Shift+AnyOfOrNone(all) {
             action=SetMods(modifiers=Meta,clearLocks);
         };
-        interpret Mode_switch+AnyOfOrNone(all) {
-            action=SetMods(modifiers=LevelTwo,clearLocks);
-        };
+
         interpret ISO_Level3_Shift+AnyOfOrNone(all) {
             action=SetMods(modifiers=LevelThree,clearLocks);
         };
+        
         interpret F25+AnyOfOrNone(all) {
             repeat=True;
             action=SetPtrDflt(affect=button,button=1);
@@ -342,18 +326,9 @@
             repeat= True;
             action= MovePtr(x=+1,y=+1);
         };
-        interpret Super_L+AnyOfOrNone(all) {
-            action= SetMods(modifiers=Super,clearLocks);
-        };
-        interpret Super_R+AnyOfOrNone(all) {
-            action= SetMods(modifiers=Super,clearLocks);
-        };
-        interpret Hyper_L+AnyOfOrNone(all) {
-            action= SetMods(modifiers=Hyper,clearLocks);
-        };
-        interpret Shift_L+AnyOfOrNone(all) {
-            action= SetMods(modifiers=Shift,clearLocks);
-        };
+
+
+
         interpret XF86Switch_VT_1+AnyOfOrNone(all) {
             repeat= True;
             action= SwitchScreen(screen=1,!same);
@@ -377,7 +352,7 @@
         interpret XF86Switch_VT_6+AnyOfOrNone(all) {
             repeat= True;
             action= SwitchScreen(screen=6,!same);
-        };
+        }   ;
         interpret XF86Switch_VT_7+AnyOfOrNone(all) {
             repeat= True;
             action= SwitchScreen(screen=7,!same);
@@ -429,7 +404,7 @@
           Alt,
           LevelThree,
           LevelTwo,
-          LevelFive,
+          #LevelFive,
           Meta,
           Super,
           Hyper;
@@ -455,12 +430,12 @@
         };
 
         type "splitrest" {
-            modifiers=Shift+Meta+LevelThree+LevelFive+Mod4;
+            modifiers=Shift+Meta+LevelThree+Lock+Mod4;
             map[Shift]=Level2;
             map[LevelThree]=Level3;
             map[Meta]=Level4;
             map[Mod4]=Level5;
-            map[LevelFive]=Level6;
+            map[Lock]=Level6;
             level_name[Level1]="Base";
             level_name[Level2]="Shift";
             level_name[Level3]="Alt Base";
@@ -865,7 +840,7 @@
         modifier_map Mod1    {<LSGT>,<RTSH>};
         modifier_map Mod2    {<SPCE>};
         modifier_map Mod3    {<RTRN>,<TAB>};
-        modifier_map Mod4    {<PRSC>,<LWIN>, <AB01>,<AB10>};
+        modifier_map Mod4    {<PRSC>,<LWIN>,<AB01>,<AB10>};
         modifier_map Mod5    {<LALT>,<RALT>,<AB02>,<AB09>};
         modifier_map Lock    {<AC11>};
     };

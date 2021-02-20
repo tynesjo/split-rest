@@ -282,15 +282,15 @@
             virtualModifier=LevelFive;
             action= SetMods(modifiers=modMapMods,clearLocks);
         };
-#        interpret Meta_R+AnyOf(all) {
-#            virtualModifier= Meta;
-#            action= SetMods(modifiers=modMapMods,clearLocks);
-#        };
+        interpret Meta_R+AnyOf(all) {
+            virtualModifier=ScrollLock;
+            action= SetMods(modifiers=modMapMods,clearLocks);
+        };
 #        interpret Meta_L+AnyOfOrNone(all) {
 #            action= SetMods(modifiers=Lock,clearLocks);
 #        };
 #        interpret Meta_R+AnyOfOrNone(all) {
-#            action= SetMods(modifiers=Mod2,clearLocks);
+#            action= SetMods(modifiers=Lock,clearLocks);
 #        };
         interpret Super_L+AnyOf(all) {
             virtualModifier= Super;
@@ -327,11 +327,9 @@
 #            useModMapMods=level1;
 #            action= LockMods(modifiers=LevelThree);
 #        };
-#        interpret Mode_switch+AnyOfOrNone(all) {
-#            virtualModifier= AltGr;
-#            useModMapMods=level1;
-#            action= SetGroup(group=+1);
-#        };
+        interpret Mode_switch+AnyOfOrNone(all) {
+            action= SetMods(modifiers=LevelTwo,clearLocks);
+        };
         interpret ISO_Level3_Shift+AnyOfOrNone(all) {
             action= SetMods(modifiers=LevelThree,clearLocks);
         };
@@ -600,7 +598,7 @@
     
     xkb_types "complete" {
     
-        virtual_modifiers NumLock,Alt,LevelThree,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
+          virtual_modifiers NumLock,Alt,LevelThree,LevelTwo,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
     
         type "ONE_LEVEL" {
             modifiers= none;
@@ -680,7 +678,7 @@
     
         name[group1]="splitRest(English (Colemak))";
 
-        # Number Keys for Use in Redirect
+        # Number Keys for Use in Redirect ======================================================================================
         key <FK13> {[0]};
         key <FK14> {[1]};
         key <FK15> {[2]};
@@ -691,7 +689,8 @@
         key <FK21> {[7]};
         key <FK22> {[8]};
         key <FK23> {[9]};
-        # Symbol Keys for Use in Redirect
+
+        # Symbol Keys for Use in Redirect ======================================================================================
         key <I147> {[asciicircum]};
         key <I148> {[numbersign]};
         key <I150> {[equal]};
@@ -730,7 +729,7 @@
         key <I189> {[less]};
         key <I190> {[Tab]};
 
-        # Function Keys Row
+        # Function Keys Row ====================================================================================================
         key  <ESC> {[Escape]};
         key <FK01> {type="CTRL+ALT", symbols= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]};
         key <FK02> {type="CTRL+ALT", symbols= [     Cyrillic_ka,              F2,              F2,              F2, XF86Switch_VT_2 ]};
@@ -749,11 +748,7 @@
         key <INS> {type="CTRL+ALT", symbols=  [    Cyrillic_ZHE,          Insert,          Insert,          Insert, Insert    ]};
         key <DELE> {type="CTRL+ALT", symbols= [          Delete,          Delete,          Delete,          Delete, Delete    ]};
 
-#        # Numbers Row FIXME
-        key  <AE06> {type="splitrest", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
-
-        # New Numbers Row
-
+        # Numbers Row ==========================================================================================================
         key <TLDE> {[NoSymbol]};
         
         key <AE01>  {
@@ -781,7 +776,8 @@
             symbols=[g,          G,          asciicircum, asciicircum,                            NoSymbol,   NoSymbol],
             actions=[NoAction(), NoAction(), NoAction(),  RedirectKey(key=<I147>,clearmods=Mod3), NoAction(), NoAction()]
         };
-# FIXME        key <AE06> {[NoSymbol]};
+        # FIXME        key <AE06> {[NoSymbol]};
+        key  <AE06> {type="splitrest", symbols= [grave, asciitilde, dead_tilde, asciitilde ]};
         key <AE07> {[NoSymbol]};
         key <AE08> {
             type="splitrest",
@@ -810,9 +806,9 @@
         key <BKSP> {[apostrophe]};
         
 
-        # New Top Alphabetic Row
-        
-        key <TAB> {[NoSymbol]};
+        # Top Alphabetic Row ===================================================================================================
+
+        key <TAB> {[Hyper_R]};
         
         key <AD01> {type="splitrest",
             symbols=[a,          A,          at,         NoSymbol,   at,                                     less],
@@ -867,23 +863,7 @@
         #key <BKSL> {[Hyper_R]};
 
     
-        # Middle Alphabetic Row
-      # key <CAPS> {type="splitrest",
-        
-      #  key <AC01> {type="splitrest",
-      #  key <AC02> {type="splitrest",
-      #  key <AC03> {
-      #  key <AC04> {
-      #  key <AC05> {[NoSymbol]};
-      #  key <AC06> {[NoSymbol]};
-      #  key <AC07> {
-      #  key <AC08> {
-      #  key <AC09> {
-      #  key <AC10> {
-      #  key <AC11> {
-      #  key <BKSL> {[Hyper_R]};
-
-        # New Middle Alphabetic Row
+        ### Middle Alphabetic Row ==============================================================================================
         
         key <CAPS> {[Control_L]};
 
@@ -942,8 +922,7 @@
         key <BKSL> {[Control_R]};
 
 
-
-        # Bottom Alphabetic Row
+        ### Bottom Alphabetic Row ==============================================================================================
         key <LFSH> {[XF86WakeUp]};
         key <LSGT> {[Alt_L]};
         key <AB01> {[Super_L]};
@@ -958,35 +937,29 @@
         key <AB10> {[Super_R]};
         key <RTSH> {[Alt_R]};
 
-
-        # Return Key
-        #key <RTRN> {[Return]};
-        
+        # Return Key ===========================================================================================================
         key <RTRN> {[Hyper_R]};
         key <>     {[Hyper_R]};
 
-
-
-
-        # Spacebar Row
+        # Spacebar Row =========================================================================================================
         key <I151> {[XF86WakeUp]};
         key <LCTL> {[Alt_L]};
         key <LWIN> {[Super_L]};
         key <LALT> {[ISO_Level5_Shift]};
-        key <SPCE> {[Hyper_L]};
+        key <SPCE> {[Num_Lock]};
         key <RALT> {[ISO_Level3_Shift]};
         key <PRSC> {[Super_R]};
         key <RCTL> {[Alt_R]};
 
-        # Navigation Keys Cluster 
-        key <PGUP> {[Prior]};
-        key <PGDN> {[Next]};
-        key   <UP> {[Up]};
-        key <LEFT> {[Left]};
-        key <RGHT> {[Right]};
-        key <DOWN> {[Down]};
+        # Navigation Island ====================================================================================================
+        key <PGUP>  {[Prior]};
+        key <PGDN>  {[Next]};
+        key <UP>    {[Up]};
+        key <LEFT>  {[Left]};
+        key <RGHT>  {[Right]};
+        key <DOWN>  {[Down]};
 
-        # Remainder
+        # Remainder ============================================================================================================
         key <NMLK> {[Num_Lock]};
         key <SCLK> {[Scroll_Lock]};
         key <LVL3> {[NoSymbol]};
@@ -1061,16 +1034,16 @@
         key <KATA> {[Tab]};
         key <HIRA> {[space]};
         key <HENK> {[slash]};
-
-        #### NoSymbol Mappings
+        key <AE13> {[hebrew_aleph]};
+        key <MUHE> {[Return]};
+        
+        #### NoSymbol Mappings =================================================================================================
         key <AB11> {[NoSymbol]};
         key <HKTG> {[NoSymbol]};
-        key <MUHE> {[Return]};
         key <JPCM> {[NoSymbol]};
         key <I120> {[NoSymbol]};
-        key <AE13> {[NoSymbol]};
 
-        #### Greek Symbols (Used for Mapping to Trackpad (libinput-gestures))
+        #### Greek Symbols (Used for Mapping to Trackpad (libinput-gestures)) ==================================================
         key <I149> {[Greek_alpha]};
         key <I154> {[Greek_beta]};
         key <I168> {[Greek_gamma]};
@@ -1091,17 +1064,16 @@
         key <I252> {[Greek_sigma]};
         key <I253> {[Greek_tau]};
     
-        ###### Modifier Maps:
+        ###### Modifier Maps: ==================================================================================================
         # Mod1 is Meta (typically Alt), Mod5 is AltGr, Mod4 is Compose
-        modifier_map Shift   {<SPCE>,<AB03>,<AB04>,<AB05>,<AB06>,<AB07>,<AB08>};
+        modifier_map Shift   {<AB03>,<AB04>,<AB05>,<AB06>,<AB07>,<AB08>};
         modifier_map Control {<CAPS>,<BKSL>};
         modifier_map Mod1    {<LSGT>,<RTSH>};
+        modifier_map Mod2    {<SPCE>};
+        modifier_map Mod3    {<RTRN>,<TAB>};
         modifier_map Mod4    {<PRSC>,<LWIN>, <AB01>,<AB10>};
         modifier_map Mod5    {<LALT>,<RALT>,<AB02>,<AB09>};
-
-        # for numeric layer
-        modifier_map Mod3 { <RTRN> };
-        modifier_map Lock { <AC11> };
+        modifier_map Lock    {<AC11>};
     };
 
 

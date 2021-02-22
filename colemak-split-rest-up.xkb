@@ -408,7 +408,7 @@
         key <DELE> {type="CTRL+ALT", symbols= [          Delete,          Delete,          Delete,          Delete, Delete    ]};
 
         # Numbers Row ==========================================================================================================
-        key <TLDE> {[NoSymbol]};
+        key <TLDE> {[hebrew_chet]};
         
         key <AE01>  {
             type="splitrest",
@@ -601,7 +601,7 @@
         key <I151> {[XF86WakeUp]};
         key <LCTL> {[Alt_L]};
         key <LWIN> {[NoSymbol]};
-        key <LALT> {[NoSymbol]};
+        key <LALT> {[hebrew_zade]};
         key <SPCE> {[Num_Lock]};
         key <RALT> {[NoSymbol]};
         key <PRSC> {[NoSymbol]};

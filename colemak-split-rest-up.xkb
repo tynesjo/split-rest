@@ -602,7 +602,7 @@
         key <LCTL> {[Alt_L]};
         key <LWIN> {[NoSymbol]};
         key <LALT> {[hebrew_zade]};
-        key <SPCE> {[Num_Lock]};
+        key <SPCE> {[hebrew_aleph]};
         key <RALT> {[NoSymbol]};
         key <PRSC> {[NoSymbol]};
         key <RCTL> {[Alt_R]};

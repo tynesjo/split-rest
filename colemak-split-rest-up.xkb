@@ -598,14 +598,14 @@
         key <RTRN> {[Hyper_R]};
 
         # Spacebar Row =========================================================================================================
-        key <I151> {[XF86WakeUp]};
-        key <LCTL> {[Alt_L]};
-        key <LWIN> {[NoSymbol]};
+        key <I151> {[hebrew_zain]};
+        key <LCTL> {[hebrew_ayin]};
+        key <LWIN> {[hebrew_resh]};
         key <LALT> {[hebrew_zade]};
         key <SPCE> {[Num_Lock]};
         key <RALT> {[hebrew_waw]};
         key <PRSC> {[NoSymbol]};
-        key <RCTL> {[Alt_R]};
+        key <RCTL> {[hebrew_taw]};
 
         # Navigation Island ====================================================================================================
         key <PGUP>  {[Prior]};

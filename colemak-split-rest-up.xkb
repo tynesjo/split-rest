@@ -567,12 +567,12 @@
         key <AC09> {
             type="splitrest",
             symbols=[m,          M,          question,   plus,                                   NoSymbol,   bracketleft],
-            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<I157>,clearmods=Mod3), NoAction(), RedirectKey(key=<I161>,clearmods=Lock)]
+            actions=[NoAction(), NoAction(), NoAction(), RedirectKey(key=<I157>,clearmods=Mod3), NoAction(), RedirectKey(key=<I161>, clearmods=Lock)]
         };
         key <AC10> {
             type="splitrest",
             symbols=[comma,      underscore, NoSymbol,   Nosymbol,   NoSymbol,   bracketright],
-            actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<I162>,clearmods=Lock)]
+            actions=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<I162>, clearmods=Lock)]
         };
 
         key <AC11> {[Meta_L]};
@@ -602,7 +602,7 @@
         key <LCTL> {[hebrew_ayin]};
         key <LWIN> {[hebrew_resh]};
         key <LALT> {[hebrew_zade]};
-        key <SPCE> {[hebrew_aleph]};
+        key <SPCE> {[Num_Lock]};
         key <RALT> {[hebrew_qoph]};
         key <PRSC> {[hebrew_waw]};
         key <RCTL> {[hebrew_taw]};

@@ -603,7 +603,7 @@
         key <LWIN> {[NoSymbol]};
         key <LALT> {[hebrew_zade]};
         key <SPCE> {[Num_Lock]};
-        key <RALT> {[NoSymbol]};
+        key <RALT> {[hebrew_waw]};
         key <PRSC> {[NoSymbol]};
         key <RCTL> {[Alt_R]};
 

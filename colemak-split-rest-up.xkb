@@ -603,8 +603,8 @@
         key <LWIN> {[hebrew_resh]};
         key <LALT> {[hebrew_zade]};
         key <SPCE> {[Num_Lock]};
-        key <RALT> {[hebrew_qoph]};
-        key <PRSC> {[hebrew_waw]};
+        key <RALT> {[hebrew_waw]};
+        key <PRSC> {[hebrew_qoph]};
         key <RCTL> {[hebrew_taw]};
 
         # Navigation Island ====================================================================================================
